@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+
+<head>
+    <link rel=”canonical” href=”https://www.gergely-szabo.com/blog/csgoloungespamblock/” />
+    <meta name=”keywords” content=”counter-strike, csgo, CS:GO, CSGO lounge, spam, spam blocking”>
+    <meta name=”news_keywords” content=”counter-strike, csgo, CS:GO, CSGO lounge, spam, spam blocking”>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The life-changing experience of diving into the Wim Hof Method.">
+    <meta name="author" content="Gergely Szabo">
+    <meta name="theme-color" content="#2C3E50">
+
+    <meta property="og:title" content="CSGO Lounge Spam Blocking" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.gergely-szabo.com/blog/csgoloungespamblock/" />
+    <meta property="og:image" content="https://s3.eu-west-2.amazonaws.com/static.gergely-szabo.com/img/blog/csgoloungespamblock/loungepost.png" />
+    <meta property="og:image:width" content="850" />
+    <meta property="og:image:height" content="284" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="CSGO Lounge Post" />
+
+
+
+    <meta property="og:description" content="CSGO Lounge Spam Blocking with userscript" />
+    <meta property="og:determiner" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <!--<meta property="og:locale:alternate" content="es_ES" />-->
+    <meta property="og:site_name" content="Gergely Szabo" />
+    <!--<meta property="og:video" content="" />-->
+
+    <meta property="article:author" content="Gergely Szabo" />
+    <meta property="article:publisher" content="https://www.gergely-szabo.com/" />
+    <meta property="article:section" content="Tools" />
+    <meta property="article:tag" content="counter-strike, csgo, CS:GO, CSGO lounge, spam, spam blocking" />
+
+
+    <title>CSGO Lounge Spam Blocking - Gergely Szabo Blog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/blog.css" rel="stylesheet">
+    <link href="/css/gergelyszabo.css" rel="stylesheet">
+    <link href="/css/lightbox.css" rel="stylesheet">
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/popper/popper.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--Needed for charts-->
+    <!--<script src="/vendor/highcharts.js"></script>-->
+
+    <!-- Plugin JavaScript -->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/js/gergelyszabo.js"></script>
+
+    <!--Third  party js-->
+    <script src="/vendor/platform.js" async defer></script>
+    <script type="text/javascript" src="/vendor/profile.js" async defer></script>
+    <script src='/vendor/lightbox.js'></script>
+    <!--<script type="text/javascript" src="/js/googleanalytics.js"></script>-->
+
+</head>
+
+<body>
+
+<!--Google Structured Data-->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://www.gergely-szabo.com/blog/",
+      "name": "Blog",
+      "image": "https://s3.eu-west-2.amazonaws.com/static.gergely-szabo.com/img/blog/blogcover.jpg"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://www.gergely-szabo.com/blog/csgoloungespamblock/",
+      "name": "CSGO Lounge Spam Blocking",
+      "image": "https://s3.eu-west-2.amazonaws.com/static.gergely-szabo.com/img/blog/csgoloungespamblock/loungepost.png"
+    }
+  }]
+}
+</script>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/">Gergely Szabo</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/">Landing Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/blog">Blog</a>
+                </li>
+                <li class="dropdown nav-item">
+                    <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown">Other
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="nav-item dropdown-item" href="/teamspeakserver">TeamSpeak Server</a></li>
+                        <li><a class="nav-item dropdown-item" href="/trading">Trading</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="blogheader" style="background-image:url('https://s3.eu-west-2.amazonaws.com/static.gergely-szabo.com/img/blog/csgoloungespamblock/pooping.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="post-heading">
+                    <h1>CSGO Lounge Spam Blocking</h1>
+                    <h2 class="subheading">Blocking unwanted trade, gambling and phising advertising comments on CSGO Lounge</h2>
+                    <span class="meta">Posted by Gergely Szabo on April 11, 2018</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <h2 class="section-heading">Intro</h2>
+            <p>
+                I have grown tired of clicking “remove” and “block” on dozens, possible hundreds of spam replies on my Lounge trades every few days so I wrote a script that does just that.
+                It’s written in JavaScript so it runs in the browser, I have tested it in Chrome, but there is not reason it should not work in others like Firefox.
+            </p>
+
+            <h2 class="section-heading">How does it work?</h2>
+            <p>
+                When you go to one of your trades the script checks the replies and if it finds texts like “Go trade cṣgogem.com” it deletes the reply and blocks the sender so they will not be able to comment any more.
+                If you find it does not block some of the spam or falsely blocks it then please contact me and I will update the script. Setup information is presented after the code.
+            </p>
+            <br>
+            <script src="https://gist.github.com/bladegery/85dc4063011bce32b689478dedd59d6a.js"></script>
+
+            <h2 class="section-heading">Setup</h2>
+            <br>
+            <h3>Chrome</h3>
+
+            <ul>
+                <li>Install the  <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank">tampermonkey extension from the chrome web store</a>.</li>
+                <li>Click the extension’s icon then “Create a new script”. Paste in the code from above and save it.</li>
+                <li>You are set up.</li>
+            </ul>
+            <br>
+
+            <h3>Firefox</h3>
+
+            <ul>
+                <li>Add the <a href="https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/" target="_blank">Greasemonkey add-on</a> to your browser.</li>
+                <li>Click on the monkey head then new script and paste in the code from above.</li>
+                <li>Save it and you are set up.</li>
+            </ul>
+            <br>
+
+            <p>Feel free to comment if you have any questions or request.</p>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+<!--Disqus module-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = 'https://www.gergely-szabo.com/blog/csgoloungespamblock/';
+                    this.page.identifier = 'blog/csgoloungespamblock/';
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://gergely-szabo.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+    <div class="footer-above">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-4">
+                    <h3>Location</h3>
+                    <p>Szeged, Hungary</p>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Around the Web</h3>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a class="btn-social btn-outline"
+                               href="https://www.facebook.com/gergelyszabo1994">
+                                <i class="fa fa-fw fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-social btn-outline" href="https://plus.google.com/+GergelySzabo94">
+                                <i class="fa fa-fw fa-google-plus"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-social btn-outline" href="https://twitter.com/gergelyszabo94">
+                                <i class="fa fa-fw fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-social btn-outline" href="https://www.linkedin.com/in/gergelyszabo1994">
+                                <i class="fa fa-fw fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <br>
+                        <li class="list-inline-item">
+                            <a class="btn-social btn-outline" href="https://www.reddit.com/user/bladegery/">
+                                <i class="fa fa-fw fa-reddit"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-social btn-outline" href="https://steamcommunity.com/id/gergelyszabo">
+                                <i class="fa fa-fw fa-steam"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-social btn-outline" href="http://www.imdb.com/user/ur27358290/">
+                                <i class="fa fa-fw fa-imdb"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Theme</h3>
+                    <p>The site was created by me using a modified open source Bootstrap theme created by
+                        <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Copyright &copy; Gergely Szabo 2018
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>
