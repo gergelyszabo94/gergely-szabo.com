@@ -169,7 +169,7 @@
                             <button type="button" class="btn btn-link link-on-light-background">Reputation</button>
                             <br>
                         </a>
-                        <a class="link-on-light-background js-scroll-trigger" href="#scams">
+                        <a class="link-on-light-background js-scroll-trigger" href="#impersonators">
                             <button type="button" class="btn btn-link link-on-light-background">Scams</button>
                             <br>
                         </a>
@@ -342,22 +342,17 @@
         </p>
         <br>
         <div class="row text-center">
-            <div class="col-lg-3 ml-auto">
+            <div class="col-lg-4 ml-auto">
                 <a href="https://csgolounge.com/profile?id=76561198036030455" target="_blank">
                     <img class="img-centered tradelogos" src="https://static.gergely-szabo.com/img/trading/logo/lounge.png" alt="CSGOLounge logo"/>
                 </a>
             </div>
-            <div class="col-lg-3 mr-auto">
+            <div class="col-lg-4 mr-auto">
                 <a href="https://csgotraders.net/profile/76561198036030455" target="_blank">
                     <img class="img-centered tradelogos" src="https://static.gergely-szabo.com/img/trading/logo/csgotraders.png" alt="CSGOTraders logo"/>
                 </a>
             </div>
-            <div class="col-lg-3 mr-auto">
-                <a href="http://www.csgoutpost.com/user/495381" target="_blank">
-                    <img class="img-centered tradelogos" src="https://static.gergely-szabo.com/img/trading/logo/outpost.png" alt="CSGOOutpost logo"/>
-                </a>
-            </div>
-            <div class="col-lg-3 mr-auto">
+            <div class="col-lg-4 mr-auto">
                 <a href="https://bitskins.com/inventory?uid=76561198036030455&app_id=730" target="_blank">
                     <img class="img-centered tradelogos" src="https://static.gergely-szabo.com/img/trading/logo/bitskins.png" alt="Bitskins logo"/>
                 </a>
@@ -386,11 +381,11 @@
                     <li>
                         <b>Items:</b> I trade mostly, but not exclusively in CS:GO items.
                         I can accept items from other games as well, but only if they are marketable and easy to sell.
-                        I am not interested in rare high value items that sell every two months or so.
+                        I am not interested in rare, high value items that sell every two months or so.
                     </li>
                     <br>
                     <li>
-                        <b>When my items are tradable: </b><a class="link-on-light-background js-scroll-trigger" href="#whatstradelocked">This has it's own section.</a>
+                        <b>When my items are tradable: </b><a class="link-on-light-background js-scroll-trigger" href="#csgotraderextension">This has it's own section.</a>
                     </li>
                     <br>
                     <li>
@@ -414,13 +409,8 @@
                     </li>
                     <br>
                     <li>
-                        <b>Inspecting:</b> With metjm you can inspect items without opening up the game.
-                        It is great if you are on mobile or on a work computer without CS:GO installed.
-                        You can
-                        <a href="https://static.gergely-szabo.com/img/trading/loreinspect.png" class="link-on-light-background" data-lightbox="Metjm">right click the “Inspect in Game…” and copy the link address </a>
-                        then open
-                        <a href="https://metjm.net/csgo/" class="link-on-light-background" target="_blank">metjm</a>
-                        and paste the link there.
+                        <b>Inspecting:</b> With <a class="link-on-light-background js-scroll-trigger" href="#csgotraderextension">my extension</a> you can inspect items without opening up the game.
+                        It is great if you are on a work computer without CS:GO installed for example.
                     </li>
                     <br>
                     <li>
@@ -453,11 +443,9 @@
                     </li>
                     <br>
                     <li>
-                        <b>Trade restrictions:</b> If there is an item in your inventory, but you can’t see it in the trade window then it is not tradable.
-                        There are two possible reasons for this: you bought your item on the Steam Community Market or unboxed it not long ago.
-                        Every newly purchased and opened item gets a week long restriction. This policy was implemented by Valve because of widespread fraud and money laundering in the past.
-                        If you navigate to your inventory and click on the item in question you should be able to see when the trade restriction expires.
-                        It’s the same with me, here is an <a href="https://static.gergely-szabo.com/img/trading/tradableafter.png" class="link-on-light-background" data-lightbox="Tradable After">example of what it looks like</a>.
+                        <b>Trade locks:</b> If there is an item in your inventory, but you can’t see it in the trade window then it is not tradable.
+                        Items that you got - whether traded, unboxed or bought on the market - in the past week are trade locked.
+                        This policy was enforced by Valve because of widespread fraud, money laundering and gambling sites. When trade locks expire is another thing you can check with <a class="link-on-light-background js-scroll-trigger" href="#csgotraderextension">my extension</a>.
                     </li>
                     <br>
                 </ul>
@@ -508,14 +496,6 @@
                     </li>
                     <br>
                     <li>
-                        <b>Commenting:</b> Leaving a comment on my profile before adding me is positive and it will
-                        increase the chance of me accepting your request.
-                        A helpful comment would read like “Hi! Added you to trade, I want to upgrade to an M9 Bayonet!”.
-                        If you write something like: “added for trading” or “adding to discuss” doesn’t get you
-                        anywhere, everyone adds me for trading and your message will contain no helpful information.
-                    </li>
-                    <br>
-                    <li>
                         <b>Bans:</b> Vac bans do not disqualify you right away, but I don’t like cheaters and their
                         excuses so It decreases the chances of accepting.
                         Trade banned or steamrep flagged accounts will be ignored.
@@ -538,17 +518,10 @@
         <br>
         <div class="text-center">
             <div>
-                <h4>Status</h4>
                 <p>
-                    I am usually active between 8AM and 12PM UTC.
+                    I am usually active between 8AM and 12PM UTC. On workdays I check my offers less frequently between 10 and 5-6.
                 </p>
-                <p>
-                    My current steam account status is:
-                </p>
-                <p id="steamstatus"></p>
             </div>
-            <button type="button" class="btn btn-primary" id="refreshstatus">Refresh Status</button>
-            <br><br>
 
             <a class="link-on-light-background js-scroll-trigger"
                href="https://steamcommunity.com/tradeoffer/new/?partner=75764727&token=tx0asz7q" target="_blank">
@@ -565,11 +538,11 @@
 
             <a class="link-on-light-background js-scroll-trigger" href="https://steamcommunity.com/id/gergelyszabo"
                target="_blank">
-                <button type="button" class="btn btn-primary">Comment in browser</button>
+                <button type="button" class="btn btn-primary">Profile in browser</button>
             </a>
             <a class="link-on-light-background js-scroll-trigger"
                href="steam://openurl/https://steamcommunity.com/id/gergelyszabo">
-                <button type="button" class="btn btn-primary">Comment in Steam</button>
+                <button type="button" class="btn btn-primary">Profile on Steam</button>
             </a>
         </div>
         <br>
@@ -741,7 +714,7 @@
             <div class="col-lg-4">
                 <p>You can’t snipe items off the market because of bot overgrowth, you can’t invest in cases because their price does not go up.
                     You can’t get great quicksells because of Valve’s policies and because so many others started doing it.
-                    If you seriously set your mind about getting into trading I recommend putting in some serious cash and time to get anywhere, but that is just my two cents based on my experience.</p>
+                    If you seriously set your mind on getting into trading I recommend putting in some serious cash and time to get anywhere, but that is just my two cents based on my experience.</p>
             </div>
             <div class="col-lg-1"></div>
         </div>
@@ -768,13 +741,13 @@
             </div>
             <div class="col-lg-6">
                 <p>
-                    Profile “+reps” are not a very good way to determine trust, but I have gathered <a href="https://steamcommunity.com/id/gergelyszabo" target="_blank">370 pages</a>
-                    of them, which adds up to 2220 over 4 years as of this writing.
+                    Profile “+reps” are not a very good way to determine trust, but I have gathered <a href="https://steamcommunity.com/id/gergelyszabo" target="_blank">599 pages</a>
+                    of them, which adds up to 3000 over 5 years as of this writing.
                     I have not used them in a while, but I am <a href="https://www.steamtrades.com/user/76561198036030455" target="_blank">+51 on steamtrades</a>,
                     and have 77 in my <a href="https://steamcommunity.com/groups/CSGOREPorts/discussions/5/617329920710800627/" target="_blank">CS:GO REP! Cash thread</a>.
                 </p>
                 <p>
-                    I have made over 21,000 trades and 35,000 market transactions on steam. I have a great inventory of thousands of items that I would not dare to risk over some petty scams.
+                    I am level 350 on Steam, which allows me to have the maximum (2000) friends. I have made over 29,000 trades and 46,000 market transactions on Steam. I have a great inventory of thousands of items that I would not dare to risk over some petty scams.
                     I don’t hide behind silly nicknames and private profiles, I am very open about who I am, you can find my social media here on my site.
                 </p>
             </div>
@@ -784,117 +757,34 @@
 </section>
 
 <!-- Scams -->
-<section class="standardcontent" id="scams">
+<section class="standardcontent" id="impersonators">
     <div class="container">
-        <h2 class="text-center">Scams</h2>
+        <h2 class="text-center">Impersonators</h2>
         <hr class="line-light">
         <div class="row">
             <div class="col-lg-6">
-                <h3>Impersonators</h3>
                 <p>
-                    This section is a work in progress. I just wrote it up real quick so fewer people fall for
-                    impersonators.
                     I have been getting increasing amount of messages about profiles that are made to look like mine.
-                    I have two accounts, the one I use for trades that is linked in the <a
+                    I only have a single account with level 350, it's linked in the <a
                         class="link-on-light-background js-scroll-trigger" href="#tradewithme">“Trade with me”</a>
-                    section and a vault account that I use to store items.
+                    section.
                     I WILL NEVER ADD YOU if you don’t especially ask for it. These profiles often take my inventory link
                     and put it in their description, making it look like it’s theirs.
                     They are trying to use my reputation to make people send their items first in some real money
-                    transactions, attempting Opskins scams or "verifying" items. These are the the methods I have heard of so far.
+                    transactions, "verifying" your items or sending you scam site links. These are the the methods I have heard of so far.
 
                 </p>
                 <br>
-                <p>Here are some examples, and again, THESE ARE NOT ME:
-                    <br>
-                <div class="row">
-                    <div class="col-lg-6">
-                        Current profile copies:
-                        <br>
-                        <a class="link-on-light-background js-scroll-trigger" target="_blank"
-                           href="https://steamcommunity.com/profiles/76561198358516684">
-                            <button type="button" class="btn btn-link link-on-light-background">Impersonator1</button>
-                            <br>
-                        </a>
-                        <a class="link-on-light-background js-scroll-trigger" target="_blank"
-                           href="https://steamcommunity.com/profiles/76561198137398100">
-                            <button type="button" class="btn btn-link link-on-light-background">Impersonator2</button>
-                            <br>
-                        </a>
-                        <a class="link-on-light-background js-scroll-trigger" target="_blank"
-                           href="https://steamcommunity.com/profiles/76561197969130373">
-                            <button type="button" class="btn btn-link link-on-light-background">Impersonator3</button>
-                            <br>
-                        </a>
-                        <a class="link-on-light-background js-scroll-trigger" target="_blank"
-                           href="https://steamcommunity.com/profiles/76561198124668812">
-                            <button type="button" class="btn btn-link link-on-light-background">Impersonator4</button>
-                            <br>
-                        </a>
-                        <a class="link-on-light-background js-scroll-trigger" target="_blank"
-                           href="https://steamcommunity.com/profiles/76561198358516684">
-                            <button type="button" class="btn btn-link link-on-light-background">Impersonator5</button>
-                            <br>
-                        </a>
-                        <a class="link-on-light-background js-scroll-trigger" target="_blank"
-                        href="https://steamcommunity.com/profiles/76561198333957445">
-                        <button type="button" class="btn btn-link link-on-light-background">Impersonator6</button>
-                        <br>
-                        </a>
-                        <a class="link-on-light-background js-scroll-trigger" target="_blank"
-                        href="https://steamcommunity.com/profiles/76561198151488945">
-                        <button type="button" class="btn btn-link link-on-light-background">Impersonator7</button>
-                        <br>
-                        </a>
-                        <a class="link-on-light-background js-scroll-trigger" target="_blank"
-                        href="https://steamcommunity.com/profiles/76561198236330690">
-                        <button type="button" class="btn btn-link link-on-light-background">Impersonator8</button>
-                        <br>
-                        </a>
-                        <a class="link-on-light-background js-scroll-trigger" target="_blank"
-                        href="https://steamcommunity.com/profiles/76561198154455342">
-                        <button type="button" class="btn btn-link link-on-light-background">Impersonator9</button>
-                        <br>
-                        </a>
-                        <!--<a class="link-on-light-background js-scroll-trigger" target="_blank"-->
-                        <!--href="https://steamcommunity.com/profiles/76561197971477247">-->
-                        <!--<button type="button" class="btn btn-link link-on-light-background">Impersonator10</button>-->
-                        <!--<br>-->
-                        <!--</a>-->
-                        <!--<a class="link-on-light-background js-scroll-trigger" target="_blank"-->
-                        <!--href="http://steamcommunity.com/profiles/76561197973149559">-->
-                        <!--<button type="button" class="btn btn-link link-on-light-background">Impersonator11</button>-->
-                        <!--<br>-->
-                        <!--</a>-->
-                    </div>
-
-                    <div class="col-lg-6">
-                        Older picture:
-                        <br>
-                        <a class="link-on-light-background js-scroll-trigger" Gergely Szabo 2019
-                           href="https://steamcommunity.com/profiles/76561198171132082">
-                            <button type="button" class="btn btn-link link-on-light-background">Impersonator11</button>
-                            <br>
-                        </a>
-                        <a class="link-on-light-background js-scroll-trigger" target="_blank"
-                           href="https://steamcommunity.com/profiles/76561198068884913">
-                            <button type="button" class="btn btn-link link-on-light-background">Impersonator12</button>
-                            <br>
-                        </a>
-                        <a class="link-on-light-background js-scroll-trigger" target="_blank"
-                           href="https://steamcommunity.com/profiles/76561198311941217">
-                            <button type="button" class="btn btn-link link-on-light-background">Impersonator13</button>
-                            <br>
-                        </a>
-                        <a class="link-on-light-background js-scroll-trigger" target="_blank"
-                           href="https://steamcommunity.com/profiles/76561198374646153">
-                            <button type="button" class="btn btn-link link-on-light-background">Impersonator14</button>
-                            <br>
-                        </a>
-                    </div>
-                </div>
+                <p>
+                    I used to collect the links to my impersonators' profiles here, but there are so many and they change so quickly that I could not keep up with it.
+                    This is what you get if you search for my name on steam, the top one is me, the rest of the 33 are scammers and this is only my most recent name...
+                    <a href="https://static.gergely-szabo.com/img/trading/impersonators.jpg" data-lightbox="List of impersonators found by a Steam friends search">
+                        <img class="img-fluid" src="https://static.gergely-szabo.com/img/trading/impersonators.jpg"
+                             alt="List of impersonators found by a Steam friends search">
+                    </a>
                 </p>
-
+            </div>
+            <div class="col-lg-6">
                 <p>
                     If you get in contact with any new ones you can give me their profile links and I will add them to this shame list.
                     I can’t do much more than reporting them and trying to warn others not fall for them.
@@ -918,111 +808,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <h4>Impersonator attempting Opskins scam</h4>
-                <p>
-                    Thanks to <a class="link-on-light-background" href="https://steamcommunity.com/id/5weeds" target="_blank">Andrius</a>,
-                    I can now show you an example of how these impersonators are trying to steal your items.
-                </p>
-                <p>
-                    They start out by adding you on steam usually from facebook trading groups or from the comment section of my profile.
-                    Then they proceed to <a class="link-on-light-background" href="https://www.youtube.com/watch?v=SeldwfOwuL8" target="_blank">"making an offer you can't refuse"</a>.
-                    In this case the scammer offered a flip knife doppler for a flip knife crimson web with a worse than average float.
-                    This is the point where you should be suspicious, no trader will offer you a 30% overpay outright.
-                </p>
-                <p>
-                    Then comes the bullshit. The scammer needs an "excuse for action" so they invent one. In this case they have to "makes sure that the knife is 100% marketable on Opskins market".
-                    They do not offer a reason of why or how that could be the case and there is no such thing as an umarketable knife, red flag number two.
-                    Please note that there are multiple scam types that are called opskins scams.
-                    If it was the fake-opskins-site type then they would have told you that they want to buy your item through opskins for safety.
-                    But this is a fake-opskins-bot type one so they will utilize your trust in the site.
-                <p>
-                    First they use a cheap item that you are not afraid to lose to demonstrate how the site works. After this you trust the site and they are ready to use it against you.
-                    In  the next round they ask you to list your knife the same way you have done with the cheap item.
-                    But this time they send you a trade offer from one of their own accounts that is made out to look like an Opskins bot.
-                </p>
-                <p>
-                    And that is basically it, they might try further persuade you to accept the offer if you are hesitant.
-                    Below is the chat log of a scam attempt.
-                </p>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 mx-auto">
-                        <a href="https://static.gergely-szabo.com/img/trading/opskins_scam/opskins_scam1.jpg" data-lightbox="Opskins Scam">
-                            <img class="img-thumbnail" src="https://static.gergely-szabo.com/img/trading/opskins_scam/opskins_scam1.jpg" alt="Opskins Scam">
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6 mx-auto">
-                        <a href="https://static.gergely-szabo.com/img/trading/opskins_scam/opskins_scam2.jpg" data-lightbox="Opskins Scam">
-                            <img class="img-thumbnail" src="https://static.gergely-szabo.com/img/trading/opskins_scam/opskins_scam2.jpg" alt="Opskins Scam">
-                        </a>
-                        <a href="https://static.gergely-szabo.com/img/trading/opskins_scam/opskins_scam3.jpg" data-lightbox="Opskins Scam"></a>
-                        <a href="https://static.gergely-szabo.com/img/trading/opskins_scam/opskins_scam4.jpg" data-lightbox="Opskins Scam"></a>
-                        <a href="https://static.gergely-szabo.com/img/trading/opskins_scam/opskins_scam5.jpg" data-lightbox="Opskins Scam"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row" id="confirmation-replace">
-            <h4>Confirmation-replace scam</h4>
-            <p>
-                Since I wrote this up here <a class="link-on-light-background" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1408053055" target="_blank">I made it into a Steam Guide</a>, it's more interactive and up-to-date than this so you should check it out.
-                This is a relatively new scam method that is very effective and leaves users wondering how it even happened.
-                I first encountered it when someone accused me of scamming them with an empty offer.
-                I shrugged it off as one of my impersonators scamming someone, not realizing what has actually happened.
-                The next one was very similar, we made a deal with a guy on steam and he sent the offer, that is when it happened.
-                Instead of confirming our trade he confirmed something else. An offer with the same items as he put in from his side, but empty on the other side.
-                It looked like he was trading it with me, but instead it was a bot that automatically canceled his offer, change the name and avatar of the bot account to mine and sent himself the offer.
-            </p>
-            <p>
-                For this to work someone has to have access to your account. In all cases I encountered it happened by logging into a phishing site.
-                Once they have your login info they still have to trick you into giving them your items, this is how they do it.
-            </p>
-            <br>
-            <h5>Gaining access to the account</h5>
-            <p>
-                There are a few different ways this can happen, I will talk about three of them here. The first and most common way of getting users to give away their login info via a phishing site.
-                These sites are set up to look legit, usually copying an existing site’s design. By the descriptions of who were scammed and by other attempted scam descriptions it usually start when a user adds you and wants one of your items.
-                They ask you to log in to a site they link and check the pattern index of your item. By logging in however, you hand them your password and steam guard code.
-            </p>
-            <p>
-                The second one is used to be more common, but can still occur. The developer of a browser extension goes rogue and decides to scam it’s users.
-                Depending on what’s granted they most likely have permission to modify data in the browser, essentially handing them access to the account, they can do anything that a user would on the steam web platform, including accepting and canceling steam trade offers.
-                The third is by infecting the user with a malware that can, for example log their keystrokes when entering passwords and sending it to the scammers.
-            </p>
-            <br>
-            <h5>The sting</h5>
-            <p>
-                Once the scammers have access to the account they can wait for the user to try to make a legit trade with another user or a service like csmoney or opskins.
-                If they don’t want to wait they can also quicken it by offering the user a too-good-to-be-true trade or offering to by some item on an absurdly high price on opskins.
-                In any case, once a user sends an offer to anyone they immediately cancel it and resend and accept their own without anything on their side.
-                The user expects the confirmation on mobile so he or she accepts it blindly, essentially giving away their items.
-            </p>
-            <br>
-            <h5>What can I do to avoid this scam?</h5>
-            <p>The best thing you can do is to not log into any shady sites, always check the domain name of where you are logging in.
-                Also don’t install random software or browser extensions from the internet without at least a bit of suspicion or research of it’s legitimacy.
-                What I often recommend to people who like to log in to sites with steam that open Steam in your browser,
-                log in there and if you encounter any site that asks you to log in with entering your password then it's a scam because you are already logged in to Steam and they should not prompt you to do so again.
-            </p>
-            <br>
-            <h5>What can I do once I got scammed or caught an attempted trade scam?</h5>
-            <p>
-                What you immediately want to do is logging out from every device, you can do it by going to:
-                Steam->Settings>Accounts->Manage Steam Guard Account Security… then clicking “Deauthorize all other devices”.
-                This will log you out of every device that you ever logged into with your account except the one you are currently using.
-                If you managed to do it then go back to the account settings and change your password. If you were scammed by a phishing site then you are okay, that is pretty much all need to do to secure your account.
-                If you were not phished then it’s tougher. I recommend reviewing your browser extensions first, remove suspicious ones  and if you are still not entirely sure what gave access to your account to the scammers you should reinstall your operating system.
-
-            </p>
-            <br>
-            <h5>What can I do to revenge it, make their job harder and help prevent others getting scammed?</h5>
-            <p>
-                This is not the type of scam like a Paypal scam that you could screenshot and send to SteamRep and have the guy banned. What you can do however is to help take down their site.
-                <a class="link-on-light-background" href="https://twitter.com/SwiftOnSecurity" target="_blank">SwiftOnSecurity</a> has compiled a great list of companies at
-                <a class="link-on-light-background" href="http://gotphish.com" target="_blank">Got Phish</a>, you can go over the list and submit the site that has phished you.
-                This helps to put the site on a blacklist and getting taken down eventually.
-            </p>
         </div>
     </div>
 </section>
@@ -1104,22 +889,39 @@
         <div class="row">
             <div class="col-lg-6">
                 <p>
-                   whatstradelocked.com has now been replaced with a chrome extension. It was expensive to run and I realized that an extension is much better suited to what we need.
-                    Feel free to contribute (even with ideas)
+                    I used to develop <a href="https://whatstradelocked.com/" target="_blank">whatstradelocked.com</a>. The name is pretty descriptive, it's a site to check when someone's CS:GO items become tradable.
+                    I realized that a browser extension is much more convenient since you don't have to open up a new page every time.
+                    I also had some userscripts that wrote and used to automate some of the small things I had to do many times a day, like copy pasting my "+rep".
+                    I have started researching how extensions work in Dec, 2018. I have released the first version of mine in January and at the time of writing it's at version 1.14.2.
+                    I usually release a new version every weekend, be it just a minor update that fixes some bugs or a major one with new features.
+                    Try it and let me know what you think!
                 </p>
             </div>
             <div class="col-lg-6">
                 <p>
-                    You can get the extension from the <a href="https://chrome.google.com/webstore/developer/dashboard" target="_blank">Chrome Web Store</a>.
+                    You can get the extension from the <a href="https://chrome.google.com/webstore/detail/csgo-trader/kaibcgikagnkfgjnibflebpldakfhfih" target="_blank">Chrome Web Store</a>.
+                    <br>
+                    Some of the current features:
                 </p>
                 <ul>
-                    <li>Adds an "Inspect on CS.DEALS..." button beside the default inspect button in inventories</li>
-                    <li>Shows when an item's tradelock will expire in the browser's timezone</li>
-                    <li>Shows a countdown that counts down to the date when the items will become tradable</li>
+                    <li>Adds an "Inspect in Browser..." button beside the default inspect button</li>
+                    <li>Shows when an item's tradelock will expire and adds a countdown</li>
+                    <li>Shows floats and other technical info in inventories, offers and on the market</li>
+                    <li>Shows Doppler knives' phases</li>
+                    <li>Shows exterior on each item and adds links to other version to inventory and market pages</li>
+                    <li>NSFW filter mode to avoid showing anime boobs to your colleagues</li>
+                    <li>Bookmark and notify when item is tradable</li>
+                    <li>Real chat status on profiles</li>
+                    <li>Colorful inventories</li>
+                    <li>Scammers are market on their profile and in trade offers (if they are SteamRep banned)</li>
+                    <li>CSGOLouunge.com auto-bumping</li>
+                    <li>CSGOTraders.net auto-bumping</li>
+                    <li>Other small automations, conveniences</li>
                 </ul>
             </div>
         </div>
-
+        <a href="https://chrome.google.com/webstore/detail/csgo-trader/kaibcgikagnkfgjnibflebpldakfhfih" target="_blank">
+            <img src="https://static.gergely-szabo.com/img/trading/logo/ChromeWebStore_Badge.png" alt="Get the CSGO Trader Chrome Extension from the Chrome Webstore" style="display: block; margin-left: auto; margin-right: auto;"/></a>
     </div>
 </section>
 
@@ -1203,7 +1005,6 @@
 
 
 <script src="/js/gergelyszabo.js"></script>
-<script src="/js/trading.js"></script>
 
 </body>
 
