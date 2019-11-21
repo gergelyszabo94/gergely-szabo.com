@@ -18,10 +18,15 @@ $(function() {
             content: $("textarea#message").val(),
             hCaptcha: $("#hcaptcha").find($("iframe")).attr('data-hcaptcha-response')
         };
-        post(url, payload, function (err, res) {
-            if (err) { return error(err) }
-            success();
+
+        let req = new XMLHttpRequest();
+        req.open("POST", url, true);
+        req.setRequestHeader("Content-Type", "application/json");
+        req.addEventListener("load",  (event) => {
+            if (req.status < 400) success();
+            else error(JSON.parse(req.responseText));
         });
+        req.send(JSON.stringify(payload));
 
         setTimeout(function() {
             $this.prop("disabled", false); // Re-enable submit button when AJAX call is complete
@@ -44,20 +49,6 @@ $('#name').focus(function() {
   $('#success').html('');
 });
 
-function post(url, body, callback) {
-    var req = new XMLHttpRequest();
-    req.open("POST", url, true);
-    req.setRequestHeader("Content-Type", "application/json");
-    req.addEventListener("load", function () {
-        if (req.status < 400) {
-            callback(null, JSON.parse(req.responseText));
-        } else {
-            callback(new Error("Request failed: " + req.statusText));
-        }
-    });
-    req.send(JSON.stringify(body));
-}
-
 function success () {
     // Success message
     $('#success').html("<div class='alert alert-success'>");
@@ -72,11 +63,14 @@ function success () {
 }
 
 function error (err) {
+    let errorMessage = 'Sorry, something went wrong. Please try again later or try to reach me another way!';
+    if (err === 'Captcha token missing') errorMessage = 'Please complete the captcha before clicking send!';
+    if (err === 'Could not verify hCaptcha') errorMessage = 'Could not verify that you have completed the captcha. Please complete it before clicking send!';
     // Fail message
     $('#success').html("<div class='alert alert-danger'>");
     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
         .append("</button>");
-    $('#success > .alert-danger').append($("<strong>").text("Sorry, it seems that my mail server is not responding. Please try again later!"));
+    $('#success > .alert-danger').append($("<strong>").text(errorMessage));
     $('#success > .alert-danger').append('</div>');
     //clear all fields
     $('#contactForm').trigger("reset");
