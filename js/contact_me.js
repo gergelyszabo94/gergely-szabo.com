@@ -1,5 +1,5 @@
 const form = document.getElementById('contactForm');
-const url = 'https://ljrfei4cy2.execute-api.eu-west-1.amazonaws.com/production/email/send';
+const url = 'https://siteapi.gergely-szabo.com/email/send';
 const submit = document.getElementById('sendMessageButton');
 
 $(function() {
@@ -15,7 +15,8 @@ $(function() {
         const payload = {
             name: $("input#name").val(),
             email: $("input#email").val(),
-            content: $("textarea#message").val()
+            content: $("textarea#message").val(),
+            hCaptcha: $("#hcaptcha").find($("iframe")).attr('data-hcaptcha-response')
         };
         post(url, payload, function (err, res) {
             if (err) { return error(err) }

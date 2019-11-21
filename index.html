@@ -47,6 +47,7 @@
     <!--<script src="/vendor/platform.js" async defer></script>-->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script type="text/javascript" src="/vendor/profile.js" async defer></script>
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
     <script type="text/javascript" src="/js/googleanalytics.js"></script>
     <!--<script src='/vendor/recaptcha.js'></script>-->
     <script src='/vendor/lightbox.js'></script>
@@ -668,6 +669,12 @@
                             <label>Message</label>
                             <textarea class="form-control" id="message" rows="5" placeholder="Message" name="message" required
                                       data-validation-required-message="Please enter a message."></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls hCaptcha">
+                            <div class="h-captcha" id="hcaptcha" data-sitekey="2334fa25-f8a1-4bcc-b3b8-5944aa4ac339" required></div>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>

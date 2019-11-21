@@ -651,3 +651,8 @@ fieldset[disabled] .btn-success:hover {
 .tradelogos {
     height:50px;
 }
+
+.hCaptcha {
+    text-align: center;
+    padding-top: 35px;
+}
