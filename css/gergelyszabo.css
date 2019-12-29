@@ -586,17 +586,21 @@ fieldset[disabled] .btn-success:hover {
 
 
 
-.link-on-light-background{
+.link-on-light-background,
+.link-on-light-background:active,
+.link-on-light-background:hover,
+.link-on-light-background:focus {
     color: #2C3E50;
 }
-.link-on-light-background:hover {
-    color: #2C3E50; }
 
-.link-on-light-background:active {
-    color: #2C3E50; }
+.on-page-nav-line {
+    display: block;
+    margin-bottom: 15px;
+}
 
-.link-on-light-background:focus {
-    color: #2C3E50; }
+.btn {
+    cursor: pointer;
+}
 
 
 /*Seamless Responsive Photo Grid - https://css-tricks.com/seamless-responsive-photo-grid/*/
