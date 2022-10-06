@@ -1,20 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import Footer from '../components/Footer.astro';
 import '../styles/bootstrap.css';
+import '../styles/lightbox.css';
 import '../styles/gergelyszabo.css';
 ---
 
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-<Layout title="Welcome to Astro.">
+<Layout title="Gergely Szabo - Landing Page" metaDescription="Gergely Szabo's Personal Website's Landing Page!">
+	<Fragment slot="custom-js">
+		<script is:inline type="text/javascript" src="/js/vendor/profile.js" async defer></script>
+		<script src="https://hcaptcha.com/1/api.js" async defer></script>
+		<script is:inline src='/js/vendor/lightbox.js'></script>
+		<script is:inline src="/js/vendor/lazyload.js"></script>
+
+		<!-- Contact Form JavaScript -->
+		<script is:inline src="/js/jqBootstrapValidation.js"></script>
+		<script is:inline src="/js/contact_me.js"></script>
+
+		<!-- Custom scripts for this template -->
+		<script is:inline src="/js/background.js"></script>
+	</>
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
+		<!--Lazyload - https://github.com/tuupola/jquery_lazyload/tree/2.x-->
+		<script>
+			window.addEventListener("load", function(event) {
+				lazyload();
+			});
+		</script>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
@@ -39,64 +51,3 @@ import '../styles/gergelyszabo.css';
 		</ul>
 	</main>
 </Layout>
-<Footer />
-
-<style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
-
-	h1 {
-		margin: 2rem 0;
-	}
-
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
-
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
-
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
