@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Section from '../layouts/Section.astro';
 import '../styles/bootstrap.css';
 import '../styles/lightbox.css';
 import '../styles/gergelyszabo.css';
@@ -46,6 +47,19 @@ import '../styles/gergelyszabo.css';
 				Weißsee, High Tauern, Austria</span>
 			</div>
 		</header>
+		<Section title="About" id="about" cl="light">
+			<div class="col-lg-4 ml-auto">
+                <p>Hi there! My name is Gergely Szabo also known as "GeRy" by many. I am a professional CS:GO trader.</p>
+                <p>
+                    I am the owner and lead developer of the <a class="link-on-light-background" href="https://csgotrader.app/" target="_blank">CSGO Trader browser extension</a>.
+                    I also used to make <a class="link-on-light-background" href="https://www.youtube.com/channel/UCkDNavvHkCFHFCZ2bmG4zzw" target="_blank">YouTube videos about CS:GO trading.</a>
+                </p>
+            </div>
+            <div class="col-lg-4 mr-auto">
+                <p>This website was created because of my fascination with technology and so you can find out more
+                    about me in an interactive way. All the photos are shot by either me, my family or friends, enjoy!</p>
+            </div>
+		</Section>
 		<!-- <ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
