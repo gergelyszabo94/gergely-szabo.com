@@ -19,6 +19,6 @@ setInterval(() => {
   if (imageHead && photoCreditTextEl) {
     imageHead.style.backgroundImage = `url(/img/background/${images[i]})`;
     photoCreditTextEl.innerHTML = credits[i];
-    i = i == images.length ? 0 : i += 1;
+    i = i === (images.length - 1) ? 0 : i += 1;
   }
 }, 10000);
