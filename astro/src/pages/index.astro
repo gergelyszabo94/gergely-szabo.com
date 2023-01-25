@@ -1,10 +1,43 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Section from '../layouts/Section.astro';
+import SocialCard from '../components/SocialCard.astro';
 import '../styles/bootstrap.css';
 import '../styles/lightbox.css';
 import '../styles/gergelyszabo.css';
+
+const socialObjects = [
+	{
+		id: "facebook",
+		href:"#socialModal1",
+		name:"Facebook",
+	},
+	{
+		id: "twitter",
+		href:"#socialModal2",
+		name:"Twitter",
+	},
+	{
+		id: "linkedin",
+		href:"#socialModal4",
+		name:"LinkedIn",
+	},
+	{
+		id: "instagram",
+		href:"#socialModal5",
+		name:"Instagram",
+	},
+	{
+		id: "reddit",
+		href:"#socialModal6",
+		name:"Reddit",
+	},
+	{
+		id: "youtube",
+		href:"#socialModal7",
+		name:"YouTube",
+	}
+];
 ---
 
 <Layout title="Gergely Szabo - Landing Page" metaDescription="Gergely Szabo's Personal Website's Landing Page!">
@@ -47,7 +80,7 @@ import '../styles/gergelyszabo.css';
 				Weißsee, High Tauern, Austria</span>
 			</div>
 		</header>
-		<Section title="About" id="about" cl="light">
+		<Section title="About" id="about" cl="light" lineStyle="line-light">
 			<div class="col-lg-4 ml-auto">
                 <p>Hi there! My name is Gergely Szabo also known as "GeRy" by many. I am a professional CS:GO trader.</p>
                 <p>
@@ -60,28 +93,19 @@ import '../styles/gergelyszabo.css';
                     about me in an interactive way. All the photos are shot by either me, my family or friends, enjoy!</p>
             </div>
 		</Section>
-		<!-- <ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul> -->
+		<Section title="Social Media" id="social" cl=""  lineStyle="line-primary">
+			{
+				socialObjects.map((social) => {
+					return(
+						<SocialCard
+							id={social.id}
+							href={social.href}
+							name={social.name}
+						/>
+					)
+				})
+			}
+		</Section>
 		<script is:inline src="/js/gergelyszabo.js"></script>
 		<!-- changing header background images -->
 		<script is:inline src="/js/background.js"></script>

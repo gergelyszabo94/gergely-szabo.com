@@ -1,0 +1,20 @@
+---
+export interface Props {
+    id: string;
+    name: string;
+    href: string;
+}
+
+const { id, href, name } = Astro.props;
+const alt = `${name} logo`;
+const imgSrc = `/img/social/${id}.png`;
+---
+
+<div class="col-sm-4 social-item">
+    <a class="social-link" href={href} data-toggle="modal">
+        <div class="caption">
+            <div class="caption-content"></div>
+        </div>
+        <img class="img-fluid" src={imgSrc} alt={alt} />
+    </a>
+</div>

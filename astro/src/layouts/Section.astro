@@ -3,15 +3,16 @@ export interface Props {
 	title: string;
 	id: string;
     cl: string;
+	lineStyle: string;
 }
 
-const { title, id, cl } = Astro.props;
+const { title, id, cl, lineStyle } = Astro.props;
 ---
 
 <section class={cl} id={id}>
     <div class="container">
         <h2 class="text-center">{title}</h2>
-        <hr class="line-light">
+        <hr class={lineStyle}>
         <div class="row">
 			<slot />
         </div>
