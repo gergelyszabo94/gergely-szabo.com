@@ -1,60 +1,69 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Section from '../layouts/Section.astro';
-import SocialCard from '../components/SocialCard.astro';
-import '../styles/bootstrap.css';
-import '../styles/lightbox.css';
-import '../styles/gergelyszabo.css';
+import Layout from "../layouts/Layout.astro";
+import Section from "../layouts/Section.astro";
+import SocialCard from "../components/SocialCard.astro";
+import "../styles/bootstrap.css";
+import "../styles/lightbox.css";
+import "../styles/gergelyszabo.css";
 
 const socialObjects = [
 	{
 		id: "facebook",
-		href:"#socialModal1",
-		name:"Facebook",
+		href: "#socialModal1",
+		name: "Facebook",
 	},
 	{
 		id: "twitter",
-		href:"#socialModal2",
-		name:"Twitter",
+		href: "#socialModal2",
+		name: "Twitter",
 	},
 	{
 		id: "linkedin",
-		href:"#socialModal4",
-		name:"LinkedIn",
+		href: "#socialModal4",
+		name: "LinkedIn",
 	},
 	{
 		id: "instagram",
-		href:"#socialModal5",
-		name:"Instagram",
+		href: "#socialModal5",
+		name: "Instagram",
 	},
 	{
 		id: "reddit",
-		href:"#socialModal6",
-		name:"Reddit",
+		href: "#socialModal6",
+		name: "Reddit",
 	},
 	{
 		id: "youtube",
-		href:"#socialModal7",
-		name:"YouTube",
-	}
+		href: "#socialModal7",
+		name: "YouTube",
+	},
 ];
 ---
 
-<Layout title="Gergely Szabo - Landing Page" metaDescription="Gergely Szabo's Personal Website's Landing Page!">
+<Layout
+	title="Gergely Szabo - Landing Page"
+	metaDescription="Gergely Szabo's Personal Website's Landing Page!"
+>
 	<Fragment slot="custom-js">
-		<script is:inline type="text/javascript" src="/js/vendor/profile.js" async defer></script>
+		<script
+			is:inline
+			type="text/javascript"
+			src="/js/vendor/profile.js"
+			async
+			defer
+		></script>
 		<script src="https://hcaptcha.com/1/api.js" async defer></script>
-		<script is:inline src='/js/vendor/lightbox.js'></script>
+		<script is:inline src="/js/vendor/lightbox.js"></script>
 		<script is:inline src="/js/vendor/lazyload.js"></script>
 
 		<!-- Contact Form JavaScript -->
 		<script is:inline src="/js/jqBootstrapValidation.js"></script>
 		<script is:inline src="/js/contact_me.js"></script>
-	</>
+	</Fragment>
 	<main>
 		<!--Lazyload - https://github.com/tuupola/jquery_lazyload/tree/2.x-->
 		<script>
-			window.addEventListener("load", function(event) {
+			window.addEventListener("load", function (event) {
 				lazyload();
 			});
 		</script>
@@ -63,46 +72,73 @@ const socialObjects = [
 		<header class="masthead" id="profile">
 			<div class="container">
 				<a href="#about">
-				<img class="profile-img animate" src="/img/profile.png" alt="Gergely Szabo Profile Picture">
+					<img
+						class="profile-img animate"
+						src="/img/profile.png"
+						alt="Gergely Szabo Profile Picture"
+					/>
 				</a>
 				<div class="intro-text">
 					<span class="name">Gergely Szabo</span>
-					<hr class="line-light">
+					<hr class="line-light" />
 					<span class="skills">CS:GO Trader - Developer</span>
-					<br>
-					<span class="skills">Entrepreneur - Husband - Lifelong Learner</span>
-					<br><br>
+					<br />
+					<span class="skills"
+						>Entrepreneur - Husband - Lifelong Learner</span
+					>
+					<br /><br />
 				</div>
 			</div>
 			<div class="intro-text">
-			<span class="photo-credit" id="photo-credit">Gergely Szabo, July of 2017
-				<br>
-				Weißsee, High Tauern, Austria</span>
+				<span class="photo-credit" id="photo-credit"
+					>Gergely Szabo, July of 2017
+					<br />
+					Weißsee, High Tauern, Austria</span
+				>
 			</div>
 		</header>
 		<Section title="About" id="about" cl="light" lineStyle="line-light">
 			<div class="col-lg-4 ml-auto">
-                <p>Hi there! My name is Gergely Szabo also known as "GeRy" by many. I am a professional CS:GO trader.</p>
-                <p>
-                    I am the owner and lead developer of the <a class="link-on-light-background" href="https://csgotrader.app/" target="_blank">CSGO Trader browser extension</a>.
-                    I also used to make <a class="link-on-light-background" href="https://www.youtube.com/channel/UCkDNavvHkCFHFCZ2bmG4zzw" target="_blank">YouTube videos about CS:GO trading.</a>
-                </p>
-            </div>
-            <div class="col-lg-4 mr-auto">
-                <p>This website was created because of my fascination with technology and so you can find out more
-                    about me in an interactive way. All the photos are shot by either me, my family or friends, enjoy!</p>
-            </div>
+				<p>
+					Hi there! My name is Gergely Szabo also known as "GeRy" by
+					many. I am a professional CS:GO trader.
+				</p>
+				<p>
+					I am the owner and lead developer of the <a
+						class="link-on-light-background"
+						href="https://csgotrader.app/"
+						target="_blank">CSGO Trader browser extension</a
+					>. I also used to make <a
+						class="link-on-light-background"
+						href="https://www.youtube.com/channel/UCkDNavvHkCFHFCZ2bmG4zzw"
+						target="_blank">YouTube videos about CS:GO trading.</a
+					>
+				</p>
+			</div>
+			<div class="col-lg-4 mr-auto">
+				<p>
+					This website was created because of my fascination with
+					technology and so you can find out more about me in an
+					interactive way. All the photos are shot by either me, my
+					family or friends, enjoy!
+				</p>
+			</div>
 		</Section>
-		<Section title="Social Media" id="social" cl=""  lineStyle="line-primary">
+		<Section
+			title="Social Media"
+			id="social"
+			cl=""
+			lineStyle="line-primary"
+		>
 			{
 				socialObjects.map((social) => {
-					return(
+					return (
 						<SocialCard
 							id={social.id}
 							href={social.href}
 							name={social.name}
 						/>
-					)
+					);
 				})
 			}
 		</Section>
