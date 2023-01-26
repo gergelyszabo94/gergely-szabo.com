@@ -2,19 +2,16 @@
 export interface Props {
     id: string;
     name: string;
-    href: string;
 }
 
-const { id, href, name } = Astro.props;
-const alt = `${name} logo`;
-const imgSrc = `/img/social/${id}.png`;
+const { id, name } = Astro.props;
 ---
 
 <div class="col-sm-4 social-item">
-    <a class="social-link" href={href} data-toggle="modal">
+    <a class="social-link" href={`#socialModal${id}`} data-toggle="modal">
         <div class="caption">
             <div class="caption-content"></div>
         </div>
-        <img class="img-fluid" src={imgSrc} alt={alt} />
+        <img class="img-fluid" src={`/img/social/${id}.png`} alt={`${name} logo`} />
     </a>
 </div>

@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Section from "../layouts/Section.astro";
 import SocialCard from "../components/SocialCard.astro";
+import SocialModal from "../layouts/SocialModal.astro";
 import "../styles/bootstrap.css";
 import "../styles/lightbox.css";
 import "../styles/gergelyszabo.css";
@@ -135,13 +136,31 @@ const socialObjects = [
 					return (
 						<SocialCard
 							id={social.id}
-							href={social.href}
 							name={social.name}
 						/>
 					);
 				})
 			}
 		</Section>
+		<SocialModal
+			title={socialObjects[5].name}
+			id={socialObjects[5].id}
+		>
+			<p>
+				Facebook. Everyone is on it, most use it, some are addicted to it.
+				<a href="https://www.facebook.com/gergelyszabo1994">I am</a> not very active, but
+				occasionally you can find me posting travel pics. I am linking to it for verification too.
+				I am being impersonated on FB and they suck at dealing with impersonation. This way you know
+				not to trust anyone claiming to be me that is not this account. I don't have any other FB accounts.
+			</p>
+			<p>
+				I only accept friend request from people I actually know, so there is no point in adding
+				me if you don't know me! Messages from strangers also remain unseen.
+				If you must contact me please use other methods.
+			</p>
+		</SocialModal>
+		
+
 		<script is:inline src="/js/gergelyszabo.js"></script>
 		<!-- changing header background images -->
 		<script is:inline src="/js/background.js"></script>
