@@ -29,14 +29,14 @@ const socialObjects = [
 		name: "Reddit",
 	},
 	{
-		id: "linkedin",
-		href: "#socialModal4",
-		name: "LinkedIn",
-	},
-	{
 		id: "facebook",
 		href: "#socialModal1",
 		name: "Facebook",
+	},
+	{
+		id: "linkedin",
+		href: "#socialModal4",
+		name: "LinkedIn",
 	}
 ];
 ---
@@ -194,8 +194,20 @@ const socialObjects = [
 			</p>
 		</SocialModal>
 		<SocialModal
-			title={socialObjects[5].name}
-			id={socialObjects[5].id}
+			title={socialObjects[3].name}
+			id={socialObjects[3].id}
+		>
+			<p>
+				I have been active on reddit for about 10 years now, naturally I joined 
+				dozens of communties over the years. The topics I follow include: world news,
+				technology, finance, war, space, automotive, dicussions.
+				I check it at least twice a day, or when I have a few minures to procrastinate.
+				<a href="https://www.reddit.com/user/bladegery/">You can find my profile here.</a>
+			</p>
+		</SocialModal>
+		<SocialModal
+			title={socialObjects[4].name}
+			id={socialObjects[4].id}
 		>
 			<p>
 				Facebook. Everyone is on it, most use it, some are addicted to it.
@@ -208,6 +220,17 @@ const socialObjects = [
 				I only accept friend request from people I actually know, so there is no point in adding
 				me if you don't know me! Messages from strangers also remain unseen.
 				If you must contact me please use other methods.
+			</p>
+		</SocialModal>
+		<SocialModal
+			title={socialObjects[5].name}
+			id={socialObjects[5].id}
+		>
+			<p>
+				I don't really use it since I became self-emloyed, but I needed something
+				to complete the second row of social icons so it looks nice and pleases my OCD.
+				You can check <a href='https://www.linkedin.com/in/gergelyszabo1994'>what kind of work I have done</a>
+				before I went all-in on trading.
 			</p>
 		</SocialModal>
 		
