@@ -4,8 +4,8 @@ import Section from "../layouts/Section.astro";
 import SocialCard from "../components/SocialCard.astro";
 import SocialModal from "../layouts/SocialModal.astro";
 import LinkOnLightBackground from "../components/LinkOnLightBackground.astro";
+import Gallery from "../components/Gallery.astro";
 import "../styles/bootstrap.css";
-import "../styles/lightbox.css";
 import "../styles/gergelyszabo.css";
 
 const socialObjects = [
@@ -55,21 +55,12 @@ const socialObjects = [
 			defer
 		></script>
 		<script src="https://hcaptcha.com/1/api.js" async defer></script>
-		<script is:inline src="/js/vendor/lightbox.js"></script>
-		<script is:inline src="/js/vendor/lazyload.js"></script>
 
 		<!-- Contact Form JavaScript -->
 		<script is:inline src="/js/jqBootstrapValidation.js"></script>
 		<script is:inline src="/js/contact_me.js"></script>
 	</Fragment>
 	<main>
-		<!--Lazyload - https://github.com/tuupola/jquery_lazyload/tree/2.x-->
-		<script>
-			window.addEventListener("load", function (event) {
-				lazyload();
-			});
-		</script>
-
 		<!--Header-->
 		<header class="masthead" id="profile">
 			<div class="container">
@@ -240,6 +231,16 @@ const socialObjects = [
 				</p>
 			</div>
 		</Section>
+		<!-- not a true section because it's not in a container -->
+		<section class="dark" id="gallery">
+			<h2 class="text-center">
+				Gallery
+			</h2>
+			<hr class="line-light">
+			<div class="row">
+				<Gallery />
+			</div>
+		</section>
 		<SocialModal
 			title={socialObjects[0].name}
 			id={socialObjects[0].id}

@@ -1,0 +1,268 @@
+---
+import GalleryPicture from "../components/GalleryPicture.astro";
+import "../styles/lightbox.css";
+
+const pictures = [
+    {
+        id: "sardinia_pedra_longa",
+        title: "Pedra Longa, Sardinia, Italy - Me, posing with beautiful cliffs in the background while taking a boat ride",
+    },
+    {
+        id: "sardinia_biriala",
+        title: "Cala Biriala, Sardinia, Italy - A rowboat from the cliffs above on my hike to Cala Biriala on our trip to Sardinia in 2019",
+    },
+    {
+        id: "vrsicbenchtheore",
+        title: "Vršič Pass, Julian Alps, Slovenia - With our dog Theodore during our 2018 family winter holiday",
+    },
+    {
+        id: "socavalley",
+        title: "Soča River Valley, Julian Alps, Slovenia - The river Soča near the town of Soča during our 2018 family winter holiday",
+    },
+    {
+        id: "portsmouth_hsm_victoria",
+        title: "Porsmouth, United Kingdom - A selfie with Admiral Nelson's HMS Victory",
+    },
+    {
+        id: "dolomites_in_the_air",
+        title: "Cortina, Italy - Failed attempt at hanging from a rock",
+    },
+    {
+        id: "dolomites_near_peak",
+        title: "Cortina, Italy - Near a peak and at the end of a Via Ferrata",
+    },
+    {
+        id: "cortina_handstand",
+        title: "Cortina, Italy - Performing a handstand on a ski slope over Cortina",
+    },
+    {
+        id: "selfie_by_the_river",
+        title: "Slap Kozjak Waterfall Walk, Slovenia - Selfie with my mother and siblings during our vacation to Slovenia and Croatia.",
+    },
+    {
+        id: "skydiving1",
+        title: "Szeged, Csongrad, Hungary - My first skydiving with my hometown below.",
+    },
+    {
+        id: "skydiving2",
+        title: "Szeged, Csongrad, Hungary - My first skydiving with my hometown below.",
+    },
+    {
+        id: "piombino_elbowlever",
+        title: "Piombino, Tuscany, Italy - Showing off my elbow lever by the lighthouse before our ferry ride to Elba during my 2018 April tour to Italy.",
+    },
+    {
+        id: "venice_boatride",
+        title: "Piombino, Tuscany, Italy - Showing off my elbow lever by the lighthouse before our ferry ride to Elba during my 2018 April tour to Italy.",
+    },
+    {
+        id: "portoazzurro",
+        title: "Porto Azzurro, Elba, Italy - Ships in the port of Porto Azzurro on the island of Elba, during my 2018 April tour to Italy.",
+    },
+    {
+        id: "athens_orange_trees",
+        title: "Kolonaki, Athens, Greece - A selfie with an orange tree coming down from Likavittos hill during my 2018 spring break vacation to Greece.",
+    },
+    {
+        id: "sounion_temple_of_poseidon",
+        title: "Sounion, Greece - The temple of Poseidon with the Mediterranean Sea in the background during my 2018 spring break vacation to Greece.",
+    },
+    {
+        id: "kekes_snowbath",
+        title: "Kékes tető, Mátra, Hungary - Snowbath at Hungary's highest peak in February of 2018",
+    },
+    {
+        id: "sant_jeroni",
+        title: "Sant Jeroni, Catalonia, Spain - Climbed the peak bare chested in February of 2018 during my trip to Barcelona",
+    },
+    {
+        id: "montserrat_monastery",
+        title: "Montserrat, Catalonia, Spain - Selfie with Santa Maria de Montserrat Abbey in the background during my trip to Barcelona",
+    },
+    {
+        id: "tatraspeak",
+        title: "Ďumbier, Tatras, Slovakia - Selfie on the peak during our 2018 January outing",
+    },
+    {
+        id: "copenhagen",
+        title: "Nyhavn Canal, Copenhagen, Denmark - Taken by my sister during our trip in mid October 2017",
+    },
+    {
+        id: "lakebehind",
+        title: "Kürsingerhütte, High-Tauern, Austria - Taken by my father on our 2017 family vacation",
+    },
+    {
+        id: "stjames",
+        title: "St James's Park, London, UK - Taken by my brother at our trip at the end of August 2017",
+    },
+    {
+        id: "theodoreprofile",
+        title: "Theodore, our mixed breed dogo and our backyard - Taken by me Mid-June 2017",
+    },
+    {
+        id: "raxviaferrata",
+        title: "Kienthalerhütte, Reichenau an der Rax, Austria - Taken by my father at our first Via Ferrata tour at the end of June 2017",
+    },
+    {
+        id: "rudolfshutte",
+        title: "Berghotel Rudolfshütte, High-Tauern, Austria - Taken by my father on our 2017 family vacation",
+    },
+    {
+        id: "valleyandwaterfalls",
+        title: "Berghotel Rudolfshütte, High-Tauern, Austria - Taken by my father on our 2017 family vacation",
+    },
+    {
+        id: "firstnightvillage",
+        title: "Hollersbach im Pinzgau, High-Tauern, Austria - Taken by my father on the first night of our 2017 family vacation",
+    },
+    {
+        id: "theodoreplaying",
+        title: "Theodore playing in May, 2017",
+    },
+    {
+        id: "canary",
+        title: "Canary Wharf Middle Dock, London, UK - Taken by my brother at our trip at the end of August 2017",
+    },
+    {
+        id: "backyard",
+        title: "Our backyard - Summer of 2017",
+    },
+    {
+        id: "amsterdam",
+        title: "Leidsegracht, Amsterdam, Netherlands - Selfie with the canals during my trip in spring break 2017",
+    },
+    {
+        id: "tulips",
+        title: "Noordwijk, Netherlands- Photo by me wandering in tulip fields after my visit of Keukenhof Spring Garden during my Amsterdam spring break trip of 2017",
+    },
+    {
+        id: "theodoreoneice",
+        title: "Gyálai-Holt-Tisza, Hungary - On ice with Theodore on one of the coldest days of January, 2017",
+    },
+    {
+        id: "chessparty",
+        title: "Chess party with my sister -  August, 2016",
+    },
+    {
+        id: "luxembourg",
+        title: "Fort Obergrünewald, City of Luxembourg, Luxembourg - With my brother during our 2016 family vacation",
+    },
+    {
+        id: "gentinshades",
+        title: "St Michael's Bridge, Gent, Belgium - On our 2016 family vacation",
+    },
+    {
+        id: "brugestower",
+        title: "The Belfry tower, Bruges, Belgium - Taken by me on our 2016 family vacation",
+    },
+    {
+        id: "koninginvsit",
+        title: "Koningin Astridpark, Bruges, Belgium - Failing at V-siting in a park on our 2016 family vacation",
+    },
+    {
+        id: "sisprom",
+        title: "On my sister's prom in January, 2016",
+    },
+    {
+        id: "cambridge",
+        title: "Saint John's Collage, Cambridge, UK, I accompanied my sister to her Cambridge admission tests in December, 2015",
+    },
+    {
+        id: "hmsbelfast",
+        title: "HMS Belfast, London, UK, On my trip with my father in August, 2015",
+    },
+    {
+        id: "ponypetting",
+        title: "Jausenstation Bodenalm, Austria - Petting a pony on our 2015 family vacation",
+    },
+    {
+        id: "grossglockner",
+        title: "Heiligenblut am Großglockner parking lot, Austria - With my family on our 2015 vacation",
+    },
+    {
+        id: "shirtlessinsnow",
+        title: "Heiligenblut am Großglockner, Austria -  Hiking sleeveless in snow with my father on our 2015 family vacation",
+    },
+    {
+        id: "sheepfriend",
+        title: "Heiligenblut am Großglockner, Austria -  Getting reaally friendly with a sheep on our 2015 family vacation",
+    },
+    {
+        id: "fnaticpizza",
+        title: "Pécs, Hungary -  Eating pizza with my brother in the summer of 2014",
+    }
+];
+---
+
+<script is:inline src="/js/vendor/lightbox.js"></script>
+<script is:inline src="/js/vendor/lazyload.js"></script>
+
+<!--Lazyload - https://github.com/tuupola/jquery_lazyload/tree/2.x-->
+<script>
+    window.addEventListener('load', () => {
+        lazyload();
+    });
+</script>
+<div class="text-center" id="photos">
+    {
+        pictures.map((picture) => {
+            return (
+                <GalleryPicture
+                    id={picture.id}
+                    title={picture.title}
+                />
+            );
+        })
+    }
+</div>
+
+<style>
+    /* Seamless Responsive Photo Grid - https://css-tricks.com/seamless-responsive-photo-grid/ */
+
+#photos {
+    /* Prevent vertical gaps */
+    line-height: 0;
+
+    -webkit-column-count: 5;
+    -webkit-column-gap:   0px;
+    -moz-column-count:    5;
+    -moz-column-gap:      0px;
+    column-count:         5;
+    column-gap:           0px;
+}
+
+#photos img {
+    /* Just in case there are inline attributes */
+    width: 100% !important;
+    height: auto !important;
+}
+
+@media (max-width: 1200px) {
+    #photos {
+        -moz-column-count:    4;
+        -webkit-column-count: 4;
+        column-count:         4;
+    }
+}
+@media (max-width: 1000px) {
+    #photos {
+        -moz-column-count:    3;
+        -webkit-column-count: 3;
+        column-count:         3;
+    }
+}
+@media (max-width: 800px) {
+    #photos {
+        -moz-column-count:    2;
+        -webkit-column-count: 2;
+        column-count:         2;
+    }
+}
+@media (max-width: 400px) {
+    #photos {
+        -moz-column-count:    1;
+        -webkit-column-count: 1;
+        column-count:         1;
+    }
+}
+</style>

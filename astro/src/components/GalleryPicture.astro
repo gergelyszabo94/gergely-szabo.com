@@ -1,0 +1,20 @@
+---
+export interface Props {
+    id: string;
+    title: string;
+}
+
+const { id, title } = Astro.props;
+---
+
+<a
+    href={`/img/gallery/${id}_large.jpg`}
+    data-title={title}
+    data-lightbox="Gergely Szabo - Landing Page Gallery">
+    <img
+        data-src={`/img/gallery/${id}.jpg`}
+        src={`/img/gallery/${id}_smallplaceholder.jpg`}
+        class="img-thumbnail lazyload"
+        alt={title}
+    />
+</a>
