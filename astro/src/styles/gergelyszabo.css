@@ -584,15 +584,6 @@ fieldset[disabled] .btn-success:hover {
     transition: all 0.3s ease-in-out;
 }
 
-
-
-.link-on-light-background,
-.link-on-light-background:active,
-.link-on-light-background:hover,
-.link-on-light-background:focus {
-    color: #2C3E50;
-}
-
 .on-page-nav-line {
     display: block;
     margin-bottom: 15px;
