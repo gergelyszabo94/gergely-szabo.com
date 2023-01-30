@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Section from "../layouts/Section.astro";
 import SocialCard from "../components/SocialCard.astro";
 import SocialModal from "../layouts/SocialModal.astro";
+import LinkOnLightBackground from "../components/LinkOnLightBackground.astro";
 import "../styles/bootstrap.css";
 import "../styles/lightbox.css";
 import "../styles/gergelyszabo.css";
@@ -105,15 +106,16 @@ const socialObjects = [
 					many. I am a professional CS:GO trader.
 				</p>
 				<p>
-					I am the owner and lead developer of the <a
-						class="link-on-light-background"
+					I am the owner and lead developer of the
+					<LinkOnLightBackground
 						href="https://csgotrader.app/"
-						target="_blank">CSGO Trader browser extension</a
-					>. I also used to make <a
-						class="link-on-light-background"
+						text="CSGO Trader browser extension"
+					/>.
+					I also used to make
+					<LinkOnLightBackground
 						href="https://www.youtube.com/channel/UCkDNavvHkCFHFCZ2bmG4zzw"
-						target="_blank">YouTube videos about CS:GO trading.</a
-					>
+						text="YouTube videos about CS:GO trading."
+					/>
 				</p>
 			</div>
 			<div class="col-lg-4 mr-auto">
@@ -141,6 +143,102 @@ const socialObjects = [
 					);
 				})
 			}
+		</Section>
+		<Section
+			title="Media Consumption"
+			id="media"
+			cl="light"
+			lineStyle="line-light"
+		>
+			<div class="row">
+				<div class="col-lg-4 ml-auto">
+					<h3 class="text-center">
+						Movies - IMDb
+					</h3>
+					<p>
+						Being a huge fan and consumer of film I opened up my
+						<LinkOnLightBackground
+							href="http://www.imdb.com/user/ur27358290"
+							text="IMDb profile"
+						/>, where you can
+						check out what
+						I watch, want to watch and all kinds of detailed statistics about my viewing and rating habits.
+						I could write an essay on my methodology of rating movies, but my most basic rule is if I think a
+						movie was "worth watching" I give it a rating of 6 or higher, below that are "time wasters".
+					</p>
+				</div>
+				<div class="col-lg-4 mr-auto">
+					<h3 class="text-center">
+						Videos - YouTube
+					</h3>
+					<p>YouTube videos are the part of my everyday life. At the time of writing I am 
+						<LinkOnLightBackground
+							href="https://www.youtube.com/channel/UCkDNavvHkCFHFCZ2bmG4zzw/channels"
+							text="subscribed to 70 channels. "
+						/>
+						The topics of these channels varies from workout to rocket science with, music, comedy,
+						science and tech in between. Some of my favourites are
+						<LinkOnLightBackground
+							href="https://www.youtube.com/user/FitnessFAQs"
+							text="FitnessFAQs"
+						/>,
+						<LinkOnLightBackground
+							href="https://www.youtube.com/user/destinws2"
+							text="SmarterEveryDay"
+						/>
+						and
+						<LinkOnLightBackground
+							href="https://www.youtube.com/user/JonnaJinton"
+							text="Jonna Jinton"
+						/>.
+					</p>
+					<p>
+						I used to make my own videos and do live streams as well, they are about CS:GO trading.
+						I don't make videos anymore but 
+						<LinkOnLightBackground
+							href="https://www.youtube.com/channel/UCkDNavvHkCFHFCZ2bmG4zzw"
+							text="they are still available so take a look if you are interested."
+						/>
+					</p>
+				</div>
+				<div class="col-lg-4 ml-auto">
+					<h3 class="text-center">
+						Music - Apple Music
+					</h3>
+					<p>
+						My music listening habits justify a monthly fee for a subscription service,
+						I consider it one of the best values all around.
+						I listen to lots of film scores, rock, pop, classical, 80s retro, some electric.
+						I have been using Google Play Music since 2013, used Spotify for a while and now Apple Music.
+						You can see what I listen to on 
+						<LinkOnLightBackground
+							href="https://music.apple.com/profile/gergelyszabo"
+							text="my Apple Music profile."
+						/>
+						You should also be able to follow me.
+					</p>
+				</div>
+			</div>
+			<div class="text-center">
+				<h2 class="text-center">
+					Books - goodreads
+				</h2>
+				<p>
+					I don't listen to nearly as many audiobooks as I used to, but I catalog every book I read (khm.. listen to) in my
+					<LinkOnLightBackground
+						href="https://www.goodreads.com/gergelyszabo"
+						text="Goodreads library"
+					/>.
+					Favourite topics include history, biography, business, finance, technology, science, politics and
+					philosophy. So mostly everything non-fiction.
+					I can wholeheartedly recommend goodreads, it is an awesome way to manage your readings, explore new
+					authors or stay motivated with a
+					<LinkOnLightBackground
+						href="https://www.goodreads.com/user_challenges/7321935"
+						text="reading challenge"
+					/>!
+				</p>
+			</div>
 		</Section>
 		<SocialModal
 			title={socialObjects[0].name}
