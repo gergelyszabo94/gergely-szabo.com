@@ -1,0 +1,134 @@
+---
+---
+
+<!--Header-->
+<header class="masthead" id="profile">
+    <div class="container">
+        <a href="#about">
+            <img
+                class="profile-img animate"
+                src="/img/profile.png"
+                alt="Gergely Szabo Profile Picture"
+            />
+        </a>
+        <div class="intro-text">
+            <span class="name">
+                Gergely Szabo
+            </span>
+            <hr class="line-light" />
+            <span class="skills">
+                CS:GO Trader - Developer
+            </span>
+            <br/>
+            <span class="skills"
+                >Entrepreneur - Husband - Lifelong Learner
+            </span>
+            <br/><br/>
+        </div>
+    </div>
+    <div class="intro-text">
+        <span class="photo-credit" id="photo-credit">
+            Gergely Szabo, July of 2017
+            <br/>
+            Weißsee, High Tauern, Austria
+        </span>
+    </div>
+</header>
+
+<!-- changing header background images -->
+<script>
+    const images = [
+    'brugessquare.jpg',
+    'primrosehillview.jpg',
+    'tinystonehengeandlake.jpg',
+    ];
+
+    const credits = [
+    'Gergely Szabo, July of 2016 <br> The Market Square, Bruges, Belgium',
+    'Gergely Szabo, August of 2017 <br> Primrose Hill Regent\'s Park, London, United Kingdom',
+    'Gergely Szabo, July of 2017 <br> Weißsee, High Tauern, Austria',
+    ];
+
+    const imageHead = document.getElementById('profile');
+    const photoCreditTextEl = document.getElementById('photo-credit');
+
+    let i = 0;
+
+    setInterval(() => {
+    if (imageHead && photoCreditTextEl) {
+        imageHead.style.backgroundImage = `url(/img/background/${images[i]})`;
+        photoCreditTextEl.innerHTML = credits[i];
+        i = i === (images.length - 1) ? 0 : i += 1;
+    }
+    }, 10000);
+</script>
+
+<style>
+    header.masthead {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        text-align: center;
+        color: white;
+        background-image:url('img/background/tinystonehengeandlake.jpg');
+        background-repeat:no-repeat;
+        background-color: #2C3E50;
+        background-size:cover;
+        background-position: center;
+    }
+
+    header.masthead img {
+        display: block;
+        margin: 0 auto 20px;
+    }
+
+    header.masthead .intro-text .name {
+        font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 2em;
+        font-weight: 700;
+        display: block;
+        text-transform: uppercase;
+    }
+
+    header.masthead .intro-text .skills {
+        font-size: 1.25em;
+        font-weight: 300;
+    }
+
+    header.masthead .intro-text .photo-credit {
+        font-size: 0.7em;
+        opacity: 0.7;
+        display: block;
+        text-align: right;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 30px;
+        padding-left: 15px;
+    }
+
+    @media (min-width: 768px) {
+        header.masthead {
+            padding-top: 200px;
+            padding-bottom: 30px;
+        }
+
+        header.masthead .intro-text .name {
+            font-size: 4.75em;
+        }
+
+        header.masthead .intro-text .skills {
+            font-size: 1.75em;
+            text-align: right;
+        }
+
+        header.masthead .intro-text .photo-credit {
+            font-size: 0.7em;
+            opacity: 0.7;
+            display: block;
+            text-align: right;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 30px;
+            padding-left: 15px;
+        }
+    }
+</style>
