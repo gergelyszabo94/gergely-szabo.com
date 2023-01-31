@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../layouts/Section.astro";
+import LinkOnLightBackground from "../components/LinkOnLightBackground.astro";
+import "../styles/bootstrap.css";
+import "../styles/gergelyszabo.css";
+
+---
+
+<Layout
+	title="TeamSpeak Server"
+	metaDescription="Gergely Szabo's TeamSpeak Server information page"
+>
+    <Section title="TeamSpeak 3 Server" id="about" cl="light standardcontent" lineStyle="line-light">
+        <div class="col-lg-3"></div>
+            <div class="col-lg-6 text-center">
+                <p>
+                    I am hosting my own private TeamSpeak 3 Server that is free to use! Also I am available here when I
+                    am at my computer.
+                    Come message me or ask for or create a (temporary if you create it) private channel for your own
+                    use! It is available 24/7 so you can chat or game with your pals anytime you want!</p>
+                <p>
+                    You can connect to the server by typing ts3.gergely-szabo.com in the address bar or using the
+                    TeamSpeak feature called nicknames (Works with clients 3.1.6 and up)!
+                    With nicknames you can simply enter "gery" or "gergelyszabo" and hop in to the Lobby. Want even
+                    simpler? Click
+                    <LinkOnLightBackground
+                        href="ts3server://ts3.gergely-szabo.com?port=9987"
+                        text="here"
+                    />
+                    to join the server automatically!</p>
+            </div>
+        <div class="col-lg-3"></div>
+    </Section>
+</Layout>
