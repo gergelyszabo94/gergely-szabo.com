@@ -10,7 +10,13 @@ export interface Props {
 const { title, id } = Astro.props;
 ---
 
-<div class="social-modal modal fade" id={`socialModal${id}`} tabindex="-1" role="dialog" aria-hidden="true">
+<div
+    class="social-modal modal fade"
+    id={`socialModal${id}`}
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true"
+>
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -23,12 +29,18 @@ const { title, id } = Astro.props;
                     <div class="col-lg-8 mx-auto">
                         <div class="modal-body">
                             <h2>{title}</h2>
-                            <hr class="line-primary">
-                            <img class="img-fluid img-centered"
-                                 src={`/img/social/${id}.png`}
-                                 alt={`${title} logo`}>
+                            <hr class="line-primary" />
+                            <img
+                                class="img-fluid img-centered"
+                                src={`/img/social/${id}.png`}
+                                alt={`${title} logo`}
+                            />
                             <slot />
-                            <button class="btn btn-success" type="button" data-dismiss="modal">
+                            <button
+                                class="btn btn-success"
+                                type="button"
+                                data-dismiss="modal"
+                            >
                                 <i class="fa fa-times"></i>
                                 Close
                             </button>
@@ -39,3 +51,80 @@ const { title, id } = Astro.props;
         </div>
     </div>
 </div>
+
+<style>
+    .social-modal .modal-dialog {
+        max-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        border: none;
+        border-radius: 0;
+        background-clip: border-box;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .social-modal .modal-dialog .modal-content {
+        padding: 100px 0;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .social-modal .modal-dialog .modal-content h2 {
+        font-size: 3em;
+        margin: 0;
+    }
+
+    .social-modal .modal-dialog .modal-content img {
+        margin-bottom: 30px;
+    }
+    .social-modal .modal-dialog .modal-content .item-details {
+        margin: 30px 0;
+    }
+
+    .social-modal .close-modal {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        width: 75px;
+        height: 75px;
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+    .social-modal .close-modal:hover {
+        opacity: 0.3;
+    }
+
+    .social-modal .close-modal .lr {
+        /* Safari and Chrome */
+        z-index: 1051;
+        width: 1px;
+        height: 75px;
+        margin-left: 35px;
+        /* IE 9 */
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        background-color: #2c3e50;
+    }
+
+    .social-modal .close-modal .lr .rl {
+        /* Safari and Chrome */
+        z-index: 1052;
+        width: 1px;
+        height: 75px;
+        /* IE 9 */
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        background-color: #2c3e50;
+    }
+
+    .social-modal .modal-backdrop {
+        display: none;
+        opacity: 0;
+    }
+</style>
