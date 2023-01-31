@@ -57,32 +57,6 @@ hr.line-primary:after {
 .img-centered {
     margin: 0 auto; }
 
-section {
-    padding: 100px 0; }
-section h2 {
-    font-size: 3em;
-    margin: 0; }
-
-section.light {
-    color: white;
-    background: #71BCCE;  }
-
-section.dark {
-    color: white;
-    background: #2C3E50;  }
-
-section.standardcontent {
-    color: white;
-    background: #71BCCE;
-    padding-top: 200px;
-}
-
-@media (max-width: 767px) {
-    section {
-        padding: 75px 0; }
-    section.first {
-        padding-top: 75px; } }
-
 .scroll-top {
     position: fixed;
     z-index: 1049;
