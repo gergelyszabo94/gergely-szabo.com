@@ -3,7 +3,6 @@ const url = 'https://siteapi.gergely-szabo.com/email/send';
 const submit = document.getElementById('sendMessageButton');
 
 $(function() {
-
   $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
     preventSubmit: true,
     submitSuccess: function($form, event) {
