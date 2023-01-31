@@ -5,6 +5,7 @@ import SocialCard from "../components/landing/SocialCard.astro";
 import SocialModal from "../layouts/SocialModal.astro";
 import LinkOnLightBackground from "../components/LinkOnLightBackground.astro";
 import Gallery from "../components/landing/gallery/Gallery.astro";
+import ContactForm from "../components/landing/contact/ContactForm.astro";
 import "../styles/bootstrap.css";
 import "../styles/gergelyszabo.css";
 
@@ -57,8 +58,8 @@ const socialObjects = [
 		<script src="https://hcaptcha.com/1/api.js" async defer></script>
 
 		<!-- Contact Form JavaScript -->
-		<script is:inline src="/js/jqBootstrapValidation.js"></script>
-		<script is:inline src="/js/contact_me.js"></script>
+		<!-- <script is:inline src="/js/jqBootstrapValidation.js"></script>
+		<script is:inline src="/js/contact_me.js"></script> -->
 	</Fragment>
 	<main>
 		<!--Header-->
@@ -241,6 +242,14 @@ const socialObjects = [
 				<Gallery />
 			</div>
 		</section>
+		<Section
+			title="Contact me"
+			id="contact"
+			cl=""
+			lineStyle="line-primary"
+		>
+			<ContactForm />
+		</Section>
 		<SocialModal
 			title={socialObjects[0].name}
 			id={socialObjects[0].id}

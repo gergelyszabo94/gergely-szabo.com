@@ -22,9 +22,13 @@ $(function() {
         let req = new XMLHttpRequest();
         req.open("POST", url, true);
         req.setRequestHeader("Content-Type", "application/json");
-        req.addEventListener("load",  (event) => {
+        req.addEventListener("load",  () => {
             if (req.status < 400) success();
             else error(JSON.parse(req.responseText));
+        });
+
+        req.addEventListener('error', () => {
+          error('request failed');
         });
         req.send(JSON.stringify(payload));
 
@@ -66,6 +70,7 @@ function error (err) {
     let errorMessage = 'Sorry, something went wrong. Please try again later or try to reach me another way!';
     if (err === 'Captcha token missing') errorMessage = 'Please complete the captcha before clicking send!';
     if (err === 'Could not verify hCaptcha') errorMessage = 'Could not verify that you have completed the captcha. Please complete it before clicking send!';
+    if (err === 'request failed') errorMessage = 'Something went wrong sending this request.';
     // Fail message
     $('#success').html("<div class='alert alert-danger'>");
     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
