@@ -1,4 +1,60 @@
 ---
+import NavItem from './NavItem.astro';
+
+export interface Props {
+	type: string,
+}
+
+const { type } = Astro.props;
+
+const mainNav = type === 'index'
+    ? [
+        {
+            href: '#about',
+            title: 'About',
+            class: 'nav-link js-scroll-trigger'
+        },
+        {
+            href: '#social',
+            title: 'Social',
+            class: 'nav-link js-scroll-trigger'
+        },
+        {
+            href: '#media',
+            title: 'Media',
+            class: 'nav-link js-scroll-trigger'
+        },
+        {
+            href: '#gallery',
+            title: 'Gallery',
+            class: 'nav-link js-scroll-trigger'
+        },
+        {
+            href: '#contact',
+            title: 'Contact',
+            class: 'nav-link js-scroll-trigger'
+        }
+    ]
+    : [
+        {
+            href: '/',
+            title: 'Landing Page',
+            class: 'nav-link js-scroll-trigger'
+        }
+    ];
+
+const otherNav = [
+    {
+        href: '/teamspeakserver',
+        title: 'TeamSpeak Server',
+        class: 'nav-item dropdown-item'
+    },
+    {
+        href: '/trading',
+        title: 'Trading',
+        class: 'nav-item dropdown-item'
+    }
+];
 ---
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -19,38 +75,35 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">
-                        About
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#social">
-                        Social
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#media">
-                        Media
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#gallery">
-                        Gallery
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">
-                        Contact
-                    </a>
-                </li>
+                {
+                    mainNav.map((nav) => {
+                        return (
+                            <NavItem
+                                href={nav.href}
+                                title={nav.title}
+                                cl={nav.class}
+                            />
+                        );
+                    })
+                }
                 <li class="dropdown nav-item">
                     <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown">
                         Other
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li>
+                        {
+                            otherNav.map((nav) => {
+                                return (
+                                    <NavItem
+                                        href={nav.href}
+                                        title={nav.title}
+                                        cl={nav.class}
+                                    />
+                                );
+                            })
+                        }
+                        <!-- <li>
                             <a class="nav-item dropdown-item" href="/teamspeakserver">
                                 TeamSpeak Server
                             </a>
@@ -59,7 +112,7 @@
                             <a class="nav-item dropdown-item" href="/trading">
                                 Trading
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </li>
             </ul>
@@ -107,7 +160,7 @@
     })(jQuery);
 </script>
 
-<style>
+<style is:global>
     #mainNav {
         font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-weight: 700;

@@ -1,15 +1,16 @@
 ---
 import Footer from '../components/Footer.astro';
-import Navigation from '../components/Navigation.astro';
+import Navigation from '../components/navi/Navigation.astro';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../styles/general.css";
 
 export interface Props {
+	type: string;
 	title: string,
 	metaDescription: string,
 }
 
-const { title, metaDescription } = Astro.props;
+const { type, title, metaDescription } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -47,7 +48,9 @@ const { title, metaDescription } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body id="page-top">
-		<Navigation />
+		<Navigation
+			type={type}
+		/>
 		<slot />
 		<Footer />
 	</body>
