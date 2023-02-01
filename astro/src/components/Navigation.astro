@@ -18,7 +18,7 @@
             <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#about">
                         About
@@ -156,7 +156,21 @@
     #mainNav .navbar-toggler:focus, #mainNav .navbar-toggler:hover {
         color: white;
         border-color: #71BCCE;
-        background-color: #71BCCE; }
+        background-color: #71BCCE;
+    }
+
+    #mainNav .dropdown-item {
+        padding: 0.25rem 1.5rem;
+        background: none;
+        color: #71BCCE;
+        outline: none;
+        font-weight: inherit;
+    }
+
+    #mainNav .dropdown-item:hover {
+        color: black;
+        background-color: #edf5f8;
+    }
 
     @media (min-width: 992px) {
         #mainNav {
