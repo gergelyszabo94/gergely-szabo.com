@@ -219,11 +219,6 @@ fieldset[disabled] .btn-success:hover {
     outline: none;
 }
 
-.on-page-nav-line {
-    display: block;
-    margin-bottom: 15px;
-}
-
 .btn {
     cursor: pointer;
 }

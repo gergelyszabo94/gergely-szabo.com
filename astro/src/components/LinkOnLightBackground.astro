@@ -2,12 +2,13 @@
 export interface Props {
     href: string;
     text: string;
+    cl?: string;
 }
 
-const { href, text } = Astro.props;
+const { href, text, cl = "" } = Astro.props;
 ---
 
-<a class="link-on-light-background" href={href}>
+<a class={`link-on-light-background ${cl}`} href={href}>
     {text}
 </a>
 
@@ -18,5 +19,10 @@ const { href, text } = Astro.props;
     .link-on-light-background:focus {
         color: #2c3e50;
         text-decoration: none;
+    }
+
+    .on-page-nav-line {
+        display: block;
+        margin-bottom: 15px;
     }
 </style>

@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../layouts/Section.astro";
+import LinkOnLightBackground from "../components/LinkOnLightBackground.astro";
+
+const sections = [
+    {
+        id: "howistarted",
+        title: "How I Started",
+    },
+    {
+        id: "howitrade",
+        title: "How I Trade",
+    },
+    {
+        id: "tradewithme",
+        title: "Trading with me",
+    },
+    {
+        id: "pricing",
+        title: "Pricing",
+    },
+    {
+        id: "becomingatrader",
+        title: "Becoming a trader",
+    },
+    {
+        id: "reputation",
+        title: "Reputation",
+    },
+    {
+        id: "impersonators",
+        title: "Impersonators",
+    },
+    {
+        id: "charity",
+        title: "Charity",
+    },
+    {
+        id: "csgotraderextension",
+        title: "My Browser Extension for trading",
+    },
+];
+---
+
+<Layout
+    type="page"
+    title="Trading"
+    metaDescription="My personal trading page where I try to give out useful information and explain my activites."
+>
+    <Section
+        title="Trading"
+        id="intro"
+        cl="light standardcontent"
+        lineStyle="line-light"
+    >
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4 text-center">
+            <p>
+                I have started putting this together to help me with trading and
+                the many questions I receive during trade negotiations. I will
+                try to add more content and expand it continuously. What I am
+                planning to write about are: how I started trading, how you can
+                start trading, how to get accurate prices, how to avoid
+                scammers, how to trade with me and more. I divided it into
+                sections for better navigation and “linkability”.
+            </p>
+        </div>
+        <div class="col-lg-4 text-center">
+            {
+                sections.map((section) => {
+                    return (
+                        <LinkOnLightBackground
+                            href={`#${section.id}`}
+                            text={section.title}
+                            cl="on-page-nav-line js-scroll-trigger"
+                        />
+                    );
+                })
+            }
+        </div>
+        <div class="col-lg-2"></div>
+    </Section>
+</Layout>
