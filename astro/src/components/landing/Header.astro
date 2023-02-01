@@ -12,24 +12,20 @@
             />
         </a>
         <div class="intro-text">
-            <span class="name">
-                Gergely Szabo
-            </span>
+            <span class="name">Gergely Szabo</span>
             <hr class="line-light" />
-            <span class="skills">
-                CS:GO Trader - Developer
-            </span>
-            <br/>
+            <span class="skills">CS:GO Trader - Developer</span>
+            <br />
             <span class="skills"
                 >Entrepreneur - Husband - Lifelong Learner
             </span>
-            <br/><br/>
+            <br /><br />
         </div>
     </div>
     <div class="intro-text">
         <span class="photo-credit" id="photo-credit">
             Gergely Szabo, July of 2017
-            <br/>
+            <br />
             Weißsee, High Tauern, Austria
         </span>
     </div>
@@ -38,28 +34,28 @@
 <!-- changing header background images -->
 <script>
     const images = [
-    'brugessquare.jpg',
-    'primrosehillview.jpg',
-    'tinystonehengeandlake.jpg',
+        "brugessquare.jpg",
+        "primrosehillview.jpg",
+        "tinystonehengeandlake.jpg",
     ];
 
     const credits = [
-    'Gergely Szabo, July of 2016 <br> The Market Square, Bruges, Belgium',
-    'Gergely Szabo, August of 2017 <br> Primrose Hill Regent\'s Park, London, United Kingdom',
-    'Gergely Szabo, July of 2017 <br> Weißsee, High Tauern, Austria',
+        "Gergely Szabo, July of 2016 <br> The Market Square, Bruges, Belgium",
+        "Gergely Szabo, August of 2017 <br> Primrose Hill Regent's Park, London, United Kingdom",
+        "Gergely Szabo, July of 2017 <br> Weißsee, High Tauern, Austria",
     ];
 
-    const imageHead = document.getElementById('profile');
-    const photoCreditTextEl = document.getElementById('photo-credit');
+    const imageHead = document.getElementById("profile");
+    const photoCreditTextEl = document.getElementById("photo-credit");
 
     let i = 0;
 
     setInterval(() => {
-    if (imageHead && photoCreditTextEl) {
-        imageHead.style.backgroundImage = `url(/img/background/${images[i]})`;
-        photoCreditTextEl.innerHTML = credits[i];
-        i = i === (images.length - 1) ? 0 : i += 1;
-    }
+        if (imageHead && photoCreditTextEl) {
+            imageHead.style.backgroundImage = `url(/img/background/${images[i]})`;
+            photoCreditTextEl.innerHTML = credits[i];
+            i = i === images.length - 1 ? 0 : (i += 1);
+        }
     }, 10000);
 </script>
 
@@ -69,10 +65,10 @@
         padding-bottom: 50px;
         text-align: center;
         color: white;
-        background-image:url('img/background/tinystonehengeandlake.jpg');
-        background-repeat:no-repeat;
-        background-color: #2C3E50;
-        background-size:cover;
+        background-image: url("img/background/tinystonehengeandlake.jpg");
+        background-repeat: no-repeat;
+        background-color: #2c3e50;
+        background-size: cover;
         background-position: center;
     }
 
@@ -82,7 +78,8 @@
     }
 
     header.masthead .intro-text .name {
-        font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
+            sans-serif;
         font-size: 2em;
         font-weight: 700;
         display: block;
@@ -129,6 +126,68 @@
             margin-left: auto;
             padding-right: 30px;
             padding-left: 15px;
+        }
+    }
+
+    .profile-img {
+        max-width: 100%;
+        height: auto;
+
+        /*Circular border*/
+        -webkit-filter: drop-shadow(2px 2px 0 white)
+            drop-shadow(-2px 2px 0 white) drop-shadow(2px -2px 0 white)
+            drop-shadow(-2px -2px 0 white);
+
+        filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px 2px 0 white)
+            drop-shadow(2px -2px 0 white) drop-shadow(-2px -2px 0 white);
+
+        /*For zoom*/
+        -webkit-transform: scale(1, 1);
+        /*This is the scale for the normal size of the image.*/
+        -webkit-transition-duration: 500ms;
+        -webkit-transition-timing-function: ease-out;
+
+        /* Webkit for Mozila Firefox */
+        -moz-transform: scale(1, 1);
+        -moz-transition-duration: 500ms;
+        -moz-transition-timing-function: ease-out;
+
+        /* Webkit for IE( Version: 11, 10 ) */
+        -ms-transform: scale(1, 1);
+        -ms-transition-duration: 500ms;
+        -ms-transition-timing-function: ease-out;
+    }
+
+    /*For zoom*/
+    .profile-img:hover {
+        /* Webkit for Chrome and Safari */
+        -webkit-transform: scale(1.1, 1.1);
+        /*This is the enlarged size scale of the image.*/
+        -webkit-transition-duration: 500ms;
+        -webkit-transition-timing-function: ease-out;
+
+        /* Webkit for Mozila Firefox */
+        -moz-transform: scale(1.1, 1.1);
+        -moz-transition-duration: 500ms;
+        -moz-transition-timing-function: ease-out;
+
+        /* Webkit for IE( Version: 11, 10 ) */
+        -ms-transform: scale(1.1, 1.1);
+        -ms-transition-duration: 500ms;
+        -ms-transition-timing-function: ease-out;
+    }
+
+    .animate {
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    @media (min-width: 576px) {
+        .profile-img {
+            max-width: 100%;
         }
     }
 </style>
