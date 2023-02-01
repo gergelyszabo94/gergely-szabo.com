@@ -40,28 +40,6 @@ h6 {
     margin: 0 auto;
 }
 
-#social * {
-    z-index: 2;
-}
-
-@media (min-width: 767px) {
-    #social .social-item {
-        margin: 0 0 30px;
-    }
-}
-
-@media (min-width: 576px) {
-    #social .social-item {
-        margin: 0 0 15px;
-    }
-}
-
-@media (max-width: 576px) {
-    #social .social-item {
-        margin: 5px 0 0;
-    }
-}
-
 .btn-outline {
     font-size: 20px;
     margin-top: 15px;

@@ -38,7 +38,7 @@ const socialObjects = [
 		id: "linkedin",
 		href: "#socialModal4",
 		name: "LinkedIn",
-	}
+	},
 ];
 ---
 
@@ -47,15 +47,10 @@ const socialObjects = [
 	title="Gergely Szabo - Landing Page"
 	metaDescription="Gergely Szabo's Personal Website's Landing Page!"
 >
-	<Fragment slot="custom-js"></Fragment>
+	<Fragment slot="custom-js" />
 	<main>
 		<Header />
-		<Section
-			title="About"
-			id="about"
-			cl="light"
-			lineStyle="line-light"
-		>
+		<Section title="About" id="about" cl="light" lineStyle="line-light">
 			<div class="col-lg-4 ms-auto">
 				<p>
 					Hi there! My name is Gergely Szabo also known as "GeRy" by
@@ -66,8 +61,7 @@ const socialObjects = [
 					<LinkOnLightBackground
 						href="https://csgotrader.app/"
 						text="CSGO Trader browser extension"
-					/>.
-					I also used to make
+					/>. I also used to make
 					<LinkOnLightBackground
 						href="https://www.youtube.com/channel/UCkDNavvHkCFHFCZ2bmG4zzw"
 						text="YouTube videos about CS:GO trading."
@@ -91,12 +85,7 @@ const socialObjects = [
 		>
 			{
 				socialObjects.map((social) => {
-					return (
-						<SocialCard
-							id={social.id}
-							name={social.name}
-						/>
-					);
+					return <SocialCard id={social.id} name={social.name} />;
 				})
 			}
 		</Section>
@@ -108,32 +97,32 @@ const socialObjects = [
 		>
 			<div class="row">
 				<div class="col-lg-4 ms-auto">
-					<h3 class="text-center">
-						Movies - IMDb
-					</h3>
+					<h3 class="text-center">Movies - IMDb</h3>
 					<p>
 						Being a huge fan and consumer of film I opened up my
 						<LinkOnLightBackground
 							href="http://www.imdb.com/user/ur27358290"
 							text="IMDb profile"
-						/>, where you can
-						check out what
-						I watch, want to watch and all kinds of detailed statistics about my viewing and rating habits.
-						I could write an essay on my methodology of rating movies, but my most basic rule is if I think a
-						movie was "worth watching" I give it a rating of 6 or higher, below that are "time wasters".
+						/>, where you can check out what I watch, want to watch
+						and all kinds of detailed statistics about my viewing
+						and rating habits. I could write an essay on my
+						methodology of rating movies, but my most basic rule is
+						if I think a movie was "worth watching" I give it a
+						rating of 6 or higher, below that are "time wasters".
 					</p>
 				</div>
 				<div class="col-lg-4 me-auto">
-					<h3 class="text-center">
-						Videos - YouTube
-					</h3>
-					<p>YouTube videos are the part of my everyday life. At the time of writing I am 
+					<h3 class="text-center">Videos - YouTube</h3>
+					<p>
+						YouTube videos are the part of my everyday life. At the
+						time of writing I am
 						<LinkOnLightBackground
 							href="https://www.youtube.com/channel/UCkDNavvHkCFHFCZ2bmG4zzw/channels"
 							text="subscribed to 70 channels. "
 						/>
-						The topics of these channels varies from workout to rocket science with, music, comedy,
-						science and tech in between. Some of my favourites are
+						The topics of these channels varies from workout to rocket
+						science with, music, comedy, science and tech in between.
+						Some of my favourites are
 						<LinkOnLightBackground
 							href="https://www.youtube.com/user/FitnessFAQs"
 							text="FitnessFAQs"
@@ -149,8 +138,9 @@ const socialObjects = [
 						/>.
 					</p>
 					<p>
-						I used to make my own videos and do live streams as well, they are about CS:GO trading.
-						I don't make videos anymore but 
+						I used to make my own videos and do live streams as
+						well, they are about CS:GO trading. I don't make videos
+						anymore but
 						<LinkOnLightBackground
 							href="https://www.youtube.com/channel/UCkDNavvHkCFHFCZ2bmG4zzw"
 							text="they are still available so take a look if you are interested."
@@ -158,15 +148,15 @@ const socialObjects = [
 					</p>
 				</div>
 				<div class="col-lg-4 ms-auto">
-					<h3 class="text-center">
-						Music - Apple Music
-					</h3>
+					<h3 class="text-center">Music - Apple Music</h3>
 					<p>
-						My music listening habits justify a monthly fee for a subscription service,
-						I consider it one of the best values all around.
-						I listen to lots of film scores, rock, pop, classical, 80s retro, some electric.
-						I have been using Google Play Music since 2013, used Spotify for a while and now Apple Music.
-						You can see what I listen to on 
+						My music listening habits justify a monthly fee for a
+						subscription service, I consider it one of the best
+						values all around. I listen to lots of film scores,
+						rock, pop, classical, 80s retro, some electric. I have
+						been using Google Play Music since 2013, used Spotify
+						for a while and now Apple Music. You can see what I
+						listen to on
 						<LinkOnLightBackground
 							href="https://music.apple.com/profile/gergelyszabo"
 							text="my Apple Music profile."
@@ -176,19 +166,18 @@ const socialObjects = [
 				</div>
 			</div>
 			<div class="text-center">
-				<h2 class="text-center">
-					Books - goodreads
-				</h2>
+				<h2 class="text-center">Books - goodreads</h2>
 				<p>
-					I don't listen to nearly as many audiobooks as I used to, but I catalog every book I read (khm.. listen to) in my
+					I don't listen to nearly as many audiobooks as I used to,
+					but I catalog every book I read (khm.. listen to) in my
 					<LinkOnLightBackground
 						href="https://www.goodreads.com/gergelyszabo"
 						text="Goodreads library"
-					/>.
-					Favourite topics include history, biography, business, finance, technology, science, politics and
-					philosophy. So mostly everything non-fiction.
-					I can wholeheartedly recommend goodreads, it is an awesome way to manage your readings, explore new
-					authors or stay motivated with a
+					/>. Favourite topics include history, biography, business,
+					finance, technology, science, politics and philosophy. So
+					mostly everything non-fiction. I can wholeheartedly
+					recommend goodreads, it is an awesome way to manage your
+					readings, explore new authors or stay motivated with a
 					<LinkOnLightBackground
 						href="https://www.goodreads.com/user_challenges/7321935"
 						text="reading challenge"
@@ -196,112 +185,135 @@ const socialObjects = [
 				</p>
 			</div>
 		</Section>
-		<Section
-			title="Gallery"
-			id="gallery"
-			cl="dark"
-			lineStyle="line-light"
-		>
+		<Section title="Gallery" id="gallery" cl="dark" lineStyle="line-light">
 			<Gallery />
 		</Section>
-		<Section
-			title="Contact me"
-			id="contact"
-			cl=""
-			lineStyle="line-primary"
-		>
+		<Section title="Contact me" id="contact" cl="" lineStyle="line-primary">
 			<ContactForm />
 		</Section>
-		<SocialModal
-			title={socialObjects[0].name}
-			id={socialObjects[0].id}
-		>
+		<SocialModal title={socialObjects[0].name} id={socialObjects[0].id}>
 			<p>
-				Mastodon is a decentralized social media platform. Unlike FB and others it's not controled by a 
-				single entity. Anyone can setup their own server and join the 
-				<a href="https://fediverse.party/">Fediverse</a> via a protocol called 
-				<a href="https://activitypub.rocks/">ActivityPub</a>, or 
-				<a href="https://joinmastodon.org/">sign up to an existing server</a>.
-				Since the servers are connected and I am being a geek I decided to
-				host my own server at <a href="https://mstdn.gergely-szabo.com/@gery">mstdn.gergely-szabo.com/@gery</a>.
-				Mine is a single user server, sign ups are disabled.
+				Mastodon is a decentralized social media platform. Unlike FB and
+				others it's not controled by a single entity. Anyone can setup
+				their own server and join the
+				<a href="https://fediverse.party/">Fediverse</a> via a protocol called
+				<a href="https://activitypub.rocks/">ActivityPub</a>, or
+				<a href="https://joinmastodon.org/"
+					>sign up to an existing server</a
+				>. Since the servers are connected and I am being a geek I
+				decided to host my own server at <a
+					href="https://mstdn.gergely-szabo.com/@gery"
+					>mstdn.gergely-szabo.com/@gery</a
+				>. Mine is a single user server, sign ups are disabled.
 			</p>
 			<p>
-				If you already have an account elsewhere you can search for gery@mstdn.gergely-szabo.com 
-				and hopefully you will find me and give me a follow. I don't post a whole lot but I reboost 
-				interesting stuff from others, may it be related to the war in Ukraine, information security,
-				internet trends, etc. I am hoping it will become more popular and I can use it as my primary platform.
-			</p>
-		</SocialModal>
-		<SocialModal
-			title={socialObjects[1].name}
-			id={socialObjects[1].id}
-		>
-			<p>
-				Twitter is definitely the social media platform that I spend the most time on.
-				I have a split personality there, I only really tweet about my trading extension and CS:GO trading related topics.
-				However I follow a diverse group of people who tweet about the war in Ukraine, national security, information security, 
-				privacy, free speach, etc.
-				I also keep track of other CS:GO traders, sites, events through Twitter.
-				<br>
-				Since Elon took over, I try limiting the time I spend browsing Twitter, I really don't like the direction it's going with
-				the algorithm taking a more and more central role, resctriction of third party applications, etc.
-				<br>
-				My DMs are open if you want to contact me for business or trading, feel free to follow me!
-				You can find me <a href="https://twitter.com/gergelyszabo94">@gergelyszabo94</a>
+				If you already have an account elsewhere you can search for
+				gery@mstdn.gergely-szabo.com and hopefully you will find me and
+				give me a follow. I don't post a whole lot but I reboost
+				interesting stuff from others, may it be related to the war in
+				Ukraine, information security, internet trends, etc. I am hoping
+				it will become more popular and I can use it as my primary
+				platform.
 			</p>
 		</SocialModal>
-		<SocialModal
-			title={socialObjects[2].name}
-			id={socialObjects[2].id}
-		>
+		<SocialModal title={socialObjects[1].name} id={socialObjects[1].id}>
 			<p>
-				I am on Instagram since mid 2018 and usually post travel photos when I go on an adventure with my wife.
-				I find Instram to be a good way of keeping track of what your friends are up to.
-				Sometimes when I have a few minutes idling I let the algorithm show me some reels that usually end up being about 
-				dogs, furniture or attractive women.
-				Give me <a href="https://www.instagram.com/gergelyszabo94/">@gergelyszabo94</a> a follow if you are interested!
+				Twitter is definitely the social media platform that I spend the
+				most time on. I have a split personality there, I only really
+				tweet about my trading extension and CS:GO trading related
+				topics. However I follow a diverse group of people who tweet
+				about the war in Ukraine, national security, information
+				security, privacy, free speach, etc. I also keep track of other
+				CS:GO traders, sites, events through Twitter.
+				<br />
+				Since Elon took over, I try limiting the time I spend browsing Twitter,
+				I really don't like the direction it's going with the algorithm taking
+				a more and more central role, resctriction of third party applications,
+				etc.
+				<br />
+				My DMs are open if you want to contact me for business or trading,
+				feel free to follow me! You can find me <a
+					href="https://twitter.com/gergelyszabo94">@gergelyszabo94</a
+				>
 			</p>
 		</SocialModal>
-		<SocialModal
-			title={socialObjects[3].name}
-			id={socialObjects[3].id}
-		>
+		<SocialModal title={socialObjects[2].name} id={socialObjects[2].id}>
 			<p>
-				I have been active on reddit for about 10 years now, naturally I joined 
-				dozens of communties over the years. The topics I follow include: world news,
-				technology, finance, war, space, automotive, dicussions.
-				I check it at least twice a day, or when I have a few minures to procrastinate.
-				<a href="https://www.reddit.com/user/bladegery/">You can find my profile here.</a>
+				I am on Instagram since mid 2018 and usually post travel photos
+				when I go on an adventure with my wife. I find Instram to be a
+				good way of keeping track of what your friends are up to.
+				Sometimes when I have a few minutes idling I let the algorithm
+				show me some reels that usually end up being about dogs,
+				furniture or attractive women. Give me <a
+					href="https://www.instagram.com/gergelyszabo94/"
+					>@gergelyszabo94</a
+				> a follow if you are interested!
 			</p>
 		</SocialModal>
-		<SocialModal
-			title={socialObjects[4].name}
-			id={socialObjects[4].id}
-		>
+		<SocialModal title={socialObjects[3].name} id={socialObjects[3].id}>
 			<p>
-				Facebook. Everyone is on it, most use it, some are addicted to it.
-				<a href="https://www.facebook.com/gergelyszabo1994">I am</a> not very active, I mostly use it to
-				keep contact with family, occasionally you can find me posting travel pics. I am linking to it for verification too.
-				I am being impersonated on FB and they suck at dealing with impersonation. This way you know
-				not to trust anyone claiming to be me that is not this account. I don't have any other FB accounts.
-			</p>
-			<p>
-				I only accept friend request from people I actually know, so there is no point in adding
-				me if you don't know me! Messages from strangers also remain unseen.
-				If you must contact me please use other methods.
+				I have been active on reddit for about 10 years now, naturally I
+				joined dozens of communties over the years. The topics I follow
+				include: world news, technology, finance, war, space,
+				automotive, dicussions. I check it at least twice a day, or when
+				I have a few minures to procrastinate.
+				<a href="https://www.reddit.com/user/bladegery/"
+					>You can find my profile here.</a
+				>
 			</p>
 		</SocialModal>
-		<SocialModal
-			title={socialObjects[5].name}
-			id={socialObjects[5].id}
-		>
+		<SocialModal title={socialObjects[4].name} id={socialObjects[4].id}>
 			<p>
-				I don't really use it since I became self-emloyed, but I needed something
-				to complete the second row of social icons so it looks nice and pleases my OCD.
-				You can check <a href='https://www.linkedin.com/in/gergelyszabo1994'>what kind of work I have done</a>
+				Facebook. Everyone is on it, most use it, some are addicted to
+				it.
+				<a href="https://www.facebook.com/gergelyszabo1994">I am</a> not
+				very active, I mostly use it to keep contact with family, occasionally
+				you can find me posting travel pics. I am linking to it for verification
+				too. I am being impersonated on FB and they suck at dealing with
+				impersonation. This way you know not to trust anyone claiming to
+				be me that is not this account. I don't have any other FB accounts.
+			</p>
+			<p>
+				I only accept friend request from people I actually know, so
+				there is no point in adding me if you don't know me! Messages
+				from strangers also remain unseen. If you must contact me please
+				use other methods.
+			</p>
+		</SocialModal>
+		<SocialModal title={socialObjects[5].name} id={socialObjects[5].id}>
+			<p>
+				I don't really use it since I became self-emloyed, but I needed
+				something to complete the second row of social icons so it looks
+				nice and pleases my OCD. You can check <a
+					href="https://www.linkedin.com/in/gergelyszabo1994"
+					>what kind of work I have done</a
+				>
 				before I went all-in on trading.
 			</p>
 		</SocialModal>
 	</main>
 </Layout>
+
+<style is:global>
+	#social * {
+		z-index: 2;
+	}
+
+	@media (min-width: 767px) {
+		#social .social-item {
+			margin: 0 0 30px;
+		}
+	}
+
+	@media (min-width: 576px) {
+		#social .social-item {
+			margin: 0 0 15px;
+		}
+	}
+
+	@media (max-width: 576px) {
+		#social .social-item {
+			margin: 5px 0 0;
+		}
+	}
+</style>
