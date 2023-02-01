@@ -1,20 +1,20 @@
 ---
 export interface Props {
-	title: string;
-	id: string;
+    title: string;
+    id: string;
     cl: string;
-	lineStyle: string;
+    lineStyle: string;
 }
 
 const { title, id, cl, lineStyle } = Astro.props;
 ---
 
 <section class={cl} id={id}>
-    <div class={id === 'gallery' ? '' : 'container'}>
+    <div class={id === "gallery" ? "" : "container"}>
         <h2 class="text-center">{title}</h2>
-        <hr class={lineStyle}>
+        <hr class={lineStyle} />
         <div class="row">
-			<slot />
+            <slot />
         </div>
     </div>
 </section>
@@ -31,17 +31,17 @@ const { title, id, cl, lineStyle } = Astro.props;
 
     section.light {
         color: white;
-        background: #71BCCE;
+        background: #71bcce;
     }
 
     section.dark {
         color: white;
-        background: #2C3E50;
+        background: #2c3e50;
     }
 
     section.standardcontent {
         color: white;
-        background: #71BCCE;
+        background: #71bcce;
         padding-top: 200px;
     }
 
@@ -51,6 +51,34 @@ const { title, id, cl, lineStyle } = Astro.props;
         }
         section.first {
             padding-top: 75px;
-        } 
+        }
+    }
+
+    hr.line-light,
+    hr.line-primary {
+        max-width: 250px;
+        margin: 25px auto 30px;
+        padding: 0;
+        text-align: center;
+        border: none;
+        border-top: solid 5px;
+        color: white;
+    }
+
+    hr.linet-light {
+        border-color: white;
+    }
+
+    hr.line-light:after {
+        color: white;
+    }
+
+    hr.line-primary {
+        border-color: #2c3e50;
+    }
+
+    hr.line-primary:after {
+        color: #2c3e50;
+        background-color: white;
     }
 </style>
