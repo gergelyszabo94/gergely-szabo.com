@@ -2,8 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Section from "../layouts/Section.astro";
 import LinkOnLightBackground from "../components/LinkOnLightBackground.astro";
+import CenteredImage from "../components/trading/CenteredImage.astro";
 
 const sections = [
+    {
+        id: "intro",
+        title: "Intro / Navigation",
+    },
     {
         id: "howistarted",
         title: "How I Started",
@@ -49,8 +54,8 @@ const sections = [
     metaDescription="My personal trading page where I try to give out useful information and explain my activites."
 >
     <Section
-        title="Trading"
-        id="intro"
+        title={sections[0].title}
+        id={sections[0].id}
         cl="light standardcontent"
         lineStyle="line-light"
     >
@@ -80,5 +85,141 @@ const sections = [
             }
         </div>
         <div class="col-lg-2"></div>
+    </Section>
+    <Section
+        title={sections[1].title}
+        id={sections[1].id}
+        cl=""
+        lineStyle="line-primary"
+    >
+        <h4 class="text-center">My first ever trade</h4>
+        <p>
+            My first ever trade was well before I have actually become a trader,
+            but it’s still quite memorable. Back in 2013, when
+            <a href="https://www.reddit.com/r/GlobalOffensive/"
+                >/r/GlobalOffensive/</a
+            >
+            had only a few thousand members and top posts had around 200 upvotes
+            I was very active there. The first operation nicknamed “Payback” was
+            still underway and the passes were discounted. The now famous
+            <a href="https://steamcommunity.com/id/etherfast">Etherfast</a>
+            made a post on reddit, giving away passes and I was one of the recipients.
+        </p>
+        <CenteredImage
+            src="/img/trading/firsttrade.png"
+            title="My first ever trade."
+            cl="mb-4"
+        />
+        <h4 class="text-center">Sniffing around for business</h4>
+        <p>
+            On the August of that year Valve introduced “skins” and I started
+            sniffing for business. Honestly I was at the right place at the
+            right time. The price of cases and and what you would consider junk
+            now were quite high and I could cash in on the early skin fever. By
+            just playing the game, I received drops like anyone else and sold
+            them on the market to gain some wallet balance. At that time it was
+            possible to buy a weapon case key just by salling a few drops.
+        </p>
+        <CenteredImage
+            src="/img/trading/anarchistsale.png"
+            title="Trading cards were damn expensive back then."
+            cl=""
+        />
+        <CenteredImage
+            src="/img/trading/weaponcasesale.png"
+            title="The first few weapon cases held their value for much longer"
+            cl=""
+        />
+        <CenteredImage
+            src="/img/trading/fivesevensale.png"
+            title="When even drops had good prices."
+            cl="mb-3"
+        />
+        <p>
+            As you can see, at the beginning even trading cards and simple
+            everyday drops were kind of expensive. Weapon cases, especially the
+            Bravo case which was being sold for €1-2 weeks after its release.
+            This allowed me some slow, but steady gains.
+        </p>
+        <h4 class="text-center">Market Sniping</h4>
+        <p>
+            I started figuring out how the community market worked and it was
+            not long after when I started making a bit of a business out of it.
+            In hindsight I have to admit It was pretty lame and inefficient. I
+            was sniping on the market. I would sit and watch the newly listed
+            items on the market. Every now and then I would see an item listed
+            on a somewhat lower price than usual. To get them before anyone else
+            I had to know the prices for most of the items so I could click
+            “buy” without having to check the price every time. At most times I
+            would earn a cent or two by listing the item on a higher price.
+            Sometime I got more lucky and earned 10-20 cents or more even. Of
+            course these transactions are pretty laughable as I literality had
+            to sit there and spend hours to find some decent deals. Should have
+            found a better thing to waste my time on at the end of the summer,
+            huh? Anyways, here are some of the more profitable ones:
+        </p>
+        <CenteredImage
+            src="/img/trading/esportssniping.png"
+            title="Earned 22 cents on this transaction, I can still recall the thrill of purchasing an item under price."
+            cl="mb-2"
+        />
+        <CenteredImage
+            src="/img/trading/gunsmokesniping.png"
+            title="Just 13 cents, but at the time was still considered to be one of the better transactions."
+            cl="mb-3"
+        />
+        <br />
+        <p>
+            I managed to work my way up to about €50 after a volatile day of the
+            bravo case. If I remember correctly it stopped dropping at the rate
+            it was supposed to after just a day, driving the price up. Meanwhile
+            some people kept listing them on seemingly random prices. Here is a
+            snippet from that day:
+        </p>
+        <CenteredImage
+            src="/img/trading/bravoday.png"
+            title="One, if not the best of my profits during market sniping."
+            cl="mb-3"
+        />
+        <p>
+            Not long after this I stopped market sniping. Nothing really
+            happened for months, except I got some drops and sold those as well.
+            Later I tried automating sniping with some relative success. When
+            bravo cases were somewhere around €0.10 in price and the operation
+            ended I decided to invest most of my money in them. I bought up 400
+            of them waiting for the opportunity to make some profit. The case’s
+            price quickly started to surge in waves. I sold some at €0.20 and
+            waited all the way up to €1 with some. All in all it was one of the
+            events that later allowed me to enter trading as well.
+        </p>
+        <h4 class="text-center">Trading</h4>
+        <p>
+            I got into trading through reddit. I was lurking around on
+            <a href="https://www.reddit.com/r/GlobalOffensiveTrade/"
+                >/r/GlobalOffensiveTrade/</a
+            >
+            for before I made my first move. I bought some keys and tried sniping
+            “quicksells” as fast as possible. I was not very good at it, because
+            back then I didn’t know about trading tools, etc. I had to manually put
+            in every key, count and recount it before sending an offer. That put
+            me in a considerable disadvantage. Still, I caught some cheap stuff that
+            I put right back to reddit and lounge. I have done this for a while and
+            kept improving my methods. For example I set up a system that looked
+            for the “qs” and “quicksell” keywords in newly created posts on reddit
+            and notified me. In case you are still in doubt, yes I was a dirty “quickbuyer”.
+            Back then it did not have that bad of a reputation though, it was considered
+            a normal and in a way essential part of trading. Then came the “go trad
+            men”, “65% quickbuy” and similar russian guys from lounge ruining it
+            for everyone.
+        </p>
+        <p>
+            Valve’s policies against fraud hurt this part of trading the most.
+            Putting newly bought keys on hold slowed everything down to a halt.
+            I had to adapt and change the way I traded so I grew my funds and
+            expanded my reach by looking for trades on other sites as well. With
+            some minor adjustments the way I traded is still essentially what I
+            do today. To learn about what that exactly is just scroll down and
+            read the next section.
+        </p>
     </Section>
 </Layout>
