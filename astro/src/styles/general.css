@@ -23,6 +23,7 @@ a:focus,
 a:hover {
     color: #71BCCE;
     outline: none;
+    text-decoration: none;
 }
 
 h1,
