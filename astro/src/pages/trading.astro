@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Section from "../layouts/Section.astro";
 import LinkOnLightBackground from "../components/LinkOnLightBackground.astro";
 import CenteredImage from "../components/trading/CenteredImage.astro";
+import Video from "../components/trading/Video.astro";
 
 const sections = [
     {
@@ -221,5 +222,50 @@ const sections = [
             do today. To learn about what that exactly is just scroll down and
             read the next section.
         </p>
+    </Section>
+    <Section
+        title={sections[2].title}
+        id={sections[2].id}
+        cl="dark"
+        lineStyle="line-light"
+    >
+        <div class="col-lg-6 ml-auto">
+            <p>
+                Unlike most other big traders who deal with top float items, items with rare and expensive stickers, and blue gems
+                I chose a different path.
+                Rather than dealing with rare collectors' stuff, I trade more common items and go for the quantity.
+                I used to advertise on CSGOLounge, CSGOTRADERS.NET, reddit, in some Steam groups and on the CS:GO Steam forum.
+                I have also built a clientele of 2000 Steam friends and
+                <a href="https://steamcommunity.com/groups/gergelyszabotrading">a trading group</a>
+                with 8000 members.
+                I rely solely on the latter two now.
+                In my posts I usually ask for downgrades with overpay, but in reality I do all kinds of trades, low
+                to high, high to high, cheap items for an expensive, and more.
+            </p>
+        </div>
+        <div class="col-lg-6 mr-auto">
+            <p>
+                Trading all kinds of items allows me to interact with all kinds of people.
+                I try to have as many successful trades every day as possible.
+                I spend hours a day taking, considering, then countering or accepting offers, chatting with people,
+                writing comments, updating trading posts and whatnot. I describe my workflow below.
+                Item to item trading used to be my life, it's still a big part of it but I prefer
+                a better work-life balance and also spending time on writing code.
+            </p>
+        </div>
+        <p>
+            You can find a video below of me getting home, sitting down to my PC and going to inbox zero with trades, chat messages, friend request and all while explaining what I do.
+            One of my friends said that it's really chilling to watch me go through my trades and I should be streaming it so I decided that I will do a recording.
+            I had several recordings up on YouTube and they became quite popular during the first lockdowns when people had nothing better to do.
+            I have done some live streams too, the recording are available
+            <a href="https://www.youtube.com/channel/UCkDNavvHkCFHFCZ2bmG4zzw">on my channel.</a>
+            I stopped making videos since I did not enjoy making them too much, making them took up a lot of my time
+            and I do not need the attention / volume of people contacting me through here.
+            The video might be educational for aspiring traders and interesting for random folks, enjoy!
+        </p>
+        <Video
+            src="https://www.youtube.com/embed/Q1nXGELz5tY"
+            title="CAN I MAKE A LIVING OUT OF TRADING? $250 PROFIT in 10 trades -  Saturday Morning Harvest #trading"
+        />
     </Section>
 </Layout>
