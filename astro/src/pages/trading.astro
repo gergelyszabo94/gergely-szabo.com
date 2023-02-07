@@ -1,6 +1,9 @@
 ---
+import "lightbox2/dist/css/lightbox.min.css";
+
 import Layout from "../layouts/Layout.astro";
 import Section from "../layouts/Section.astro";
+import TipsListItem from "../layouts/TipsListItem.astro";
 import LinkOnLightBackground from "../components/LinkOnLightBackground.astro";
 import CenteredImage from "../components/trading/CenteredImage.astro";
 import Video from "../components/trading/Video.astro";
@@ -48,6 +51,11 @@ const sections = [
     },
 ];
 ---
+
+<script>
+    import "jquery/dist/jquery.min.js";
+    import "lightbox2/dist/js/lightbox.min.js";
+</script>
 
 <Layout
     type="page"
@@ -231,41 +239,292 @@ const sections = [
     >
         <div class="col-lg-6 ml-auto">
             <p>
-                Unlike most other big traders who deal with top float items, items with rare and expensive stickers, and blue gems
-                I chose a different path.
-                Rather than dealing with rare collectors' stuff, I trade more common items and go for the quantity.
-                I used to advertise on CSGOLounge, CSGOTRADERS.NET, reddit, in some Steam groups and on the CS:GO Steam forum.
-                I have also built a clientele of 2000 Steam friends and
-                <a href="https://steamcommunity.com/groups/gergelyszabotrading">a trading group</a>
-                with 8000 members.
-                I rely solely on the latter two now.
-                In my posts I usually ask for downgrades with overpay, but in reality I do all kinds of trades, low
-                to high, high to high, cheap items for an expensive, and more.
+                Unlike most other big traders who deal with top float items,
+                items with rare and expensive stickers, and blue gems I chose a
+                different path. Rather than dealing with rare collectors' stuff,
+                I trade more common items and go for the quantity. I used to
+                advertise on CSGOLounge, CSGOTRADERS.NET, reddit, in some Steam
+                groups and on the CS:GO Steam forum. I have also built a
+                clientele of 2000 Steam friends and
+                <a href="https://steamcommunity.com/groups/gergelyszabotrading"
+                    >a trading group</a
+                >
+                with 8000 members. I rely solely on the latter two now. In my posts
+                I usually ask for downgrades with overpay, but in reality I do all
+                kinds of trades, low to high, high to high, cheap items for an expensive,
+                and more.
             </p>
         </div>
         <div class="col-lg-6 mr-auto">
             <p>
-                Trading all kinds of items allows me to interact with all kinds of people.
-                I try to have as many successful trades every day as possible.
-                I spend hours a day taking, considering, then countering or accepting offers, chatting with people,
-                writing comments, updating trading posts and whatnot. I describe my workflow below.
-                Item to item trading used to be my life, it's still a big part of it but I prefer
-                a better work-life balance and also spending time on writing code.
+                Trading all kinds of items allows me to interact with all kinds
+                of people. I try to have as many successful trades every day as
+                possible. I spend hours a day taking, considering, then
+                countering or accepting offers, chatting with people, writing
+                comments, updating trading posts and whatnot. I describe my
+                workflow below. Item to item trading used to be my life, it's
+                still a big part of it but I prefer a better work-life balance
+                and also spending time on writing code.
             </p>
         </div>
         <p>
-            You can find a video below of me getting home, sitting down to my PC and going to inbox zero with trades, chat messages, friend request and all while explaining what I do.
-            One of my friends said that it's really chilling to watch me go through my trades and I should be streaming it so I decided that I will do a recording.
-            I had several recordings up on YouTube and they became quite popular during the first lockdowns when people had nothing better to do.
-            I have done some live streams too, the recording are available
-            <a href="https://www.youtube.com/channel/UCkDNavvHkCFHFCZ2bmG4zzw">on my channel.</a>
-            I stopped making videos since I did not enjoy making them too much, making them took up a lot of my time
-            and I do not need the attention / volume of people contacting me through here.
-            The video might be educational for aspiring traders and interesting for random folks, enjoy!
+            You can find a video below of me getting home, sitting down to my PC
+            and going to inbox zero with trades, chat messages, friend request
+            and all while explaining what I do. One of my friends said that it's
+            really chilling to watch me go through my trades and I should be
+            streaming it so I decided that I will do a recording. I had several
+            recordings up on YouTube and they became quite popular during the
+            first lockdowns when people had nothing better to do. I have done
+            some live streams too, the recording are available
+            <a href="https://www.youtube.com/channel/UCkDNavvHkCFHFCZ2bmG4zzw"
+                >on my channel.</a
+            >
+            I stopped making videos since I did not enjoy making them too much, making
+            them took up a lot of my time and I do not need the attention / volume
+            of people contacting me through here. The video might be educational
+            for aspiring traders and interesting for random folks, enjoy!
         </p>
         <Video
             src="https://www.youtube.com/embed/Q1nXGELz5tY"
             title="CAN I MAKE A LIVING OUT OF TRADING? $250 PROFIT in 10 trades -  Saturday Morning Harvest #trading"
         />
+    </Section>
+    <Section
+        title={sections[3].title}
+        id={sections[3].id}
+        cl="light"
+        lineStyle="line-light"
+    >
+        <div class="col-lg-12 ml-auto">
+            <p class="mb-4">
+                This section is a guide to help you trade with me. I always
+                recommend sending an offer first where you can also add a
+                comment of what you are looking for. If you want my help
+                choosing an item that you can afford or want to discuss the
+                specifics of a multi-item trade feel free to add me.
+            </p>
+            <div class="row">
+                <div class="col-lg-6 ml-auto">
+                    <h3 class="mb-3">Tips for sending an offer</h3>
+                    <ul>
+                        <TipsListItem title="Items">
+                            I trade mostly, but not exclusively in CS:GO items.
+                            I can accept items from other games as well, but
+                            only if they are marketable and easy to sell. I am
+                            not interested in rare, high value items that sell
+                            every two months or so.
+                        </TipsListItem>
+                        <TipsListItem title="When my items are tradable">
+                            <LinkOnLightBackground
+                                href="#csgotraderextension"
+                                text="My extension"
+                                cl="js-scroll-trigger"
+                            />
+                            used to be able to show the remaning trade lock duration
+                            on items, but Valve removed an API endpoint that the
+                            extension used to gather this information so it's no
+                            longer available. I am currently working on a page for
+                            my site that will show trade locks.
+                        </TipsListItem>
+                        <TipsListItem title="Cheap items">
+                            I don't mind talking on cheaper items, but I have
+                            limited inventory space (CS:GO inventories are
+                            limited to 1000 items) so I basically have to sell
+                            any items below 4-5 euros after getting them. Also
+                            there are some occasions nowadays when I can't
+                            accept an offer that I like because I don't have the
+                            space. I try to free up some space or counter by
+                            taking some cheap items out of the trade. Since
+                            Valve added Storage Units I have also been juggling
+                            my items in and out of them.
+                        </TipsListItem>
+                        <TipsListItem title="Collector’s items">
+                            You have to understand that I don’t trade items to
+                            use them in-game, therefore I will have no advantage
+                            from cosmetic differences. I am not interested in
+                            items with top floats, amazing patterns and looks,
+                            katowice and other expensive stickered weapons.
+                            Items like these are dangerous for me, I don't
+                            always notice expensive stickers when sending or
+                            countering to offers. I have lost money giving away
+                            stickered items for the price of standard ones. I
+                            can value items with good floats over market, for
+                            exmaple I would not mind valuing 0.19 float mid-tier
+                            gloves as more expensive than the market price.
+                        </TipsListItem>
+                        <TipsListItem title="Find what you like">
+                            It’s easy to get lost in a big inventory clicking
+                            away between pages, but search and filters make it
+                            much easier! With a few keywords you can search for
+                            <LinkOnLightBackground
+                                href="/img/trading/slaughtersearch.png"
+                                text="paint styles"
+                                lightbox="Search and Filter"
+                            />
+                            or
+                            <LinkOnLightBackground
+                                href="/img/trading/karambitsearch.png"
+                                text="knife types"
+                                lightbox="Search and Filter"
+                            />
+                            . With advanced filters you can filter for
+                            <LinkOnLightBackground
+                                href="/img/trading/riflefilter.png"
+                                text="item types"
+                                lightbox="Search and Filter"
+                            />
+                            and
+                            <LinkOnLightBackground
+                                href="/img/trading/stfilter.png"
+                                text="categories"
+                                lightbox="Search and Filter"
+                            />
+                            .
+                            <LinkOnLightBackground
+                                href="#csgotraderextension"
+                                text="My extension"
+                                cl="js-scroll-trigger"
+                            />
+                            also makes this easier. You can sort by price, float, stickers, etc.
+                        </TipsListItem>
+                        <TipsListItem title="Inspecting">
+                            With
+                            <LinkOnLightBackground
+                                href="#csgotraderextension"
+                                text="my extension"
+                                cl="js-scroll-trigger"
+                            />
+                            you can inspect items without opening up the game.
+                            It is great if you are on a work computer without CS:GO
+                            installed for example.
+                            You can also inspect items on server, in-hand, it's like you already owned the item.
+                        </TipsListItem>
+                        <TipsListItem title="Include a message">
+                            With a trade offer you can also
+                            <LinkOnLightBackground
+                                href="/img/trading/butterflymessage.png"
+                                text="include a message"
+                                lightbox="Include message"
+                            />
+                            ! Use it to tell me what kinds of items you are
+                            looking for other than what you send the offer for.
+                            This makes counter offering much easier!
+                        </TipsListItem>
+                        <TipsListItem title="Pricing">
+                            I have created a whole section
+                            <LinkOnLightBackground
+                                href="#pricing"
+                                text="about pricing."
+                                cl="js-scroll-trigger"
+                            />
+                            If it’s still too complicated or you are not sure, feel
+                            free to add me on steam.
+                        </TipsListItem>
+                        <TipsListItem title="Accounts">
+                            Trading accounts is against every site’s
+                            terms of service. It is also very easy to recover an
+                            account after the trade through customer support rendering
+                            the deal void. For these reasons I do not trade and am
+                            not interested in any kinds of accounts, be it Steam,
+                            Origin, Uplay, LoL or else.
+                        </TipsListItem>
+                        <TipsListItem title="Games">
+                            Sorry, I am not interested in Steam game
+                            gifts or keys. The same applies for every other service.
+                        </TipsListItem>
+                        <TipsListItem title="Holds">
+                            Unlike many other traders I don’t have
+                            that big of a problem with trade holds. If you don’t
+                            have steam mobile authenticator you can still trade with
+                            me, although I will ask for more overpay if you want
+                            me to wait two weeks. If you are not sure what trade
+                            holds are or why you might have them then check out Steam’s
+                            relevant
+                            <LinkOnLightBackground
+                                href="https://support.steampowered.com/kb_article.php?ref=8078-TPHC-6195"
+                                text="Knowledge Base article"
+                            />
+                            .
+                        </TipsListItem>
+                        <TipsListItem title="Trade locks">
+                            If there is an item in your inventory,
+                            but you can’t see it in the trade window then it is not
+                            tradable. Items that you got - whether traded, unboxed
+                            or bought on the market - in the past week are trade
+                            locked. This policy was enforced by Valve because of
+                            widespread fraud, money laundering and gambling sites.
+                        </TipsListItem>
+                    </ul>
+                </div>
+                <div class="col-lg-6 ml-auto">
+                    <h3 class="mb-3">Tips for adding me</h3>
+                    <ul>
+                        <TipsListItem title="Civility">
+                            I always try to be civil and understanding
+                            and I expect some degree of politeness from you as well.
+                            If you start throwing insults or profanities at me I
+                            will remove you from my friend list.
+                        </TipsListItem>
+                        <TipsListItem title="Language">
+                            I communicate in english during trade
+                            negotiations so I expect you to be able to
+                            understand and use the language to some degree. You
+                            can try to use Google Translate, but it can produce
+                            some very confusing results.
+                        </TipsListItem>
+                        <TipsListItem title="Idea">
+                            If you add me please have something thought
+                            out of what you want. I don’t like when I get messages
+                            like “Hey I have x item offer me something, I don’t care
+                            what!”. At least tell me what types of items you like/are
+                            looking for.
+                        </TipsListItem>
+                        <TipsListItem title="Private and friends-only profile">
+                            I don’t accept
+                            private profiles because that way I have no information
+                            to asses someone and most people with private profiles
+                            are scammers anyways. Steam has a
+                            <LinkOnLightBackground
+                                href="https://support.steampowered.com/kb_article.php?ref=4113-YUDH-6401"
+                                text="Knowledge Base article"
+                            />
+                            about setting profile privacy settings that you can use
+                            to make your profile public before adding me.
+                        </TipsListItem>
+                        <TipsListItem title="Private and friends-only inventory">
+                            If I can’t
+                            see what you have and you don’t notify me about it beforehand
+                            then I will very likely ignore your friend request. Same
+                            as for profiles you should change the privacy settings
+                            before adding me.
+                        </TipsListItem>
+                        <TipsListItem title="Empty inventory">
+                            If you add me without telling
+                            me why and you have an empty inventory I will just assume
+                            that you either want to scam me or you will beg for free
+                            items. We can’t trade if you don’t have items, so I ignore
+                            profiles with empty or close to empty inventories.
+                        </TipsListItem>
+                        <TipsListItem title="Bans">
+                            Vac bans do not disqualify you right away,
+                            but I don’t like cheaters and their excuses so It decreases
+                            the chances of accepting. Trade banned or SteamRep flagged
+                            accounts will be ignored.
+                        </TipsListItem>
+                        <TipsListItem title="Real money">
+                            You can buy items from me with Crypto or Bank transfer (for most countries).
+                            However you will have to go first since I have extensive
+                            <LinkOnLightBackground
+                                href="#reputation"
+                                text="reputation"
+                                cl="js-scroll-trigger"
+                            />
+                            . I also list my tradable items on many Peer-to-Peer markets.
+                            I deliver within a few minutes, unless of course I am sleeping.
+                        </TipsListItem>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </Section>
 </Layout>

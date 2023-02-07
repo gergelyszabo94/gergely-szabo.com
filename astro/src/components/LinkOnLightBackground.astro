@@ -3,20 +3,21 @@ export interface Props {
     href: string;
     text: string;
     cl?: string;
+    lightbox?: string;
 }
 
-const { href, text, cl = "" } = Astro.props;
+const { href, text, cl = "", lightbox} = Astro.props;
 ---
 
-<a class={`link-on-light-background ${cl}`} href={href}>
+<a class={`${cl}`} href={href} data-lightbox={lightbox}>
     {text}
 </a>
 
 <style>
-    .link-on-light-background,
-    .link-on-light-background:active,
-    .link-on-light-background:hover,
-    .link-on-light-background:focus {
+    a,
+    a:active,
+    a:hover,
+    a:focus {
         color: #2c3e50;
     }
 
