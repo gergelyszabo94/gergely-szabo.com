@@ -564,4 +564,95 @@ const sections = [
             </p>
         </div>
     </Section>
+    <Section
+        title={sections[4].title}
+        id={sections[4].id}
+        cl=""
+        lineStyle="line-light"
+    >
+        <p>
+            I used Steam Market prices for a long time and this section
+            described how I have done that in detail. I moved on to using
+            <a href="https://buff.163.com/market/csgo#tab=selling&page_num=1">
+                Buff
+            </a>
+            prices sometime around the end of 2020. There is a lot more volume 
+            compared to any other single CS:GO marketplace, including the official
+            one. I was convinced by the argument that we should use the data from
+            the most popular source as "source of truth". Zipel has a nice, detailed
+            video about
+            <a href="https://www.youtube.com/watch?v=gKj1lgG6i4s">
+                Buff prices, Cash vs. Steam Prices
+            </a>
+            that you can watch if you like that format. I will describe my personal
+            method of pricing.
+        </p>
+        <p>
+            95%+ items are very easy to price on buff, simply take the cheapest
+            listed right now and you are done. This works very well for liquids
+            (items with ample supply and volume), which is the reason I use
+            "BUFF163 - BUFF Starting at" as the pricing mode in my extension. It
+            gets more complicated when the items are rare enough that they only
+            have a few or none listed on buff. If you know that an item you are
+            dealing with is rare, or that you can only see a few listed what you
+            can do is:
+        </p>
+        <ul class="ps-5">
+            <li>
+                Check the Trade Records or Price Trend tabs for data on the
+                item's actual sales history
+            </li>
+            <li>
+                Check the Buy Orders tab, if the item is rare it might not be
+                very useful but at least it gives you a minimum price
+            </li>
+            <li>
+                Check the prices of other exteriors, for example don't value a
+                Minimal Wear item more than a Factory New
+            </li>
+            <li>
+                If the item is StatTrak™ than checking the non-st price and its
+                relation to other exterior's prices can give you some hints
+            </li>
+            <li>
+                The above works the other way around too, but there is almost
+                always more data for non-st ones, it can also help with
+                Souvenirs
+            </li>
+            <li>
+                It's not really a pricing tip but a general advice, if it's so
+                rare that you can't find a reliable price than you might want to
+                avoid that item
+            </li>
+        </ul>
+        <p>
+            The third group of items, items with good to great, to top float,
+            stickered, patterned, one-of-a-kind items where Buff really shines
+            over the Steam Market. For example, you can filter for Doppler
+            Phases, Fade percentages, floats and some patterns.
+            Just keep it in mind that you should not "overfilter", it's
+            an easy mistake to make especially with patterns, since there
+            are so many of them. Filtering to Paint Seeds and finding
+            one like yours listed for x price might not mean anything.
+            Another example to overfiltering would be owning a 97% Fade
+            knife with 0.009 float. Since these combinations are so rare
+            that you might only find a few listings matching your criteria.
+            My tip to avoid overfiltering is not using the default ranges
+            preset by Buff, rather choosing Customize and entering 97-100
+            for the Fade Range in the latter example.
+            Valuing stickered items is very hard, which is of the reasons
+            why I avoid items with expensive stickers. I recommend watching
+            <a href="https://www.youtube.com/watch?v=gKj1lgG6i4s">
+                Zipel's guide to pricing stickered skins.
+            </a>
+            Patterned item valuing (ch gems, etc) is an art of its own,
+            I generally avoid them. Occasionally a helpful Steam guide 
+            comes along but honestly, I don't have the patience to count pixels
+            and keep track of such items in my inventory.
+            <a href="https://broskins.com/">
+                Broskins
+            </a>
+            might be able to help you with them.
+        </p>
+    </Section>
 </Layout>
