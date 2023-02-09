@@ -39,7 +39,7 @@ const mainNav = type === 'index'
         {
             href: '/',
             title: 'Landing Page',
-            class: 'nav-link js-scroll-trigger'
+            class: 'nav-link'
         }
     ];
 
@@ -89,7 +89,7 @@ const brandHref = type === 'index' ? '#page-top' : '/';
                     })
                 }
                 <li class="dropdown nav-item">
-                    <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" data-toggle="dropdown">
                         Other
                         <span class="caret"></span>
                     </a>
@@ -105,16 +105,6 @@ const brandHref = type === 'index' ? '#page-top' : '/';
                                 );
                             })
                         }
-                        <!-- <li>
-                            <a class="nav-item dropdown-item" href="/teamspeakserver">
-                                TeamSpeak Server
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-item dropdown-item" href="/trading">
-                                Trading
-                            </a>
-                        </li> -->
                     </ul>
                 </li>
             </ul>
@@ -122,7 +112,7 @@ const brandHref = type === 'index' ? '#page-top' : '/';
     </div>
 </nav>
 
-<script>
+<script is:inline>
     (function($) {
         "use strict";
 
@@ -143,12 +133,6 @@ const brandHref = type === 'index' ? '#page-top' : '/';
         // Closes responsive menu when a scroll trigger link is clicked
         $('.js-scroll-trigger').click(function() {
             $('.navbar-collapse').collapse('hide');
-        });
-
-        // Activate scrollspy to add active class to navbar items on scroll
-        $('body').scrollspy({
-            target: '#mainNav',
-            offset: 54
         });
 
         // Collapse the navbar when page is scrolled
