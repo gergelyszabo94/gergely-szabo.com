@@ -1,62 +1,63 @@
 ---
-import NavItem from './NavItem.astro';
+import NavItem from "./NavItem.astro";
 
 export interface Props {
-	type: string,
+    type: string;
 }
 
 const { type } = Astro.props;
 
-const mainNav = type === 'index'
-    ? [
-        {
-            href: '#about',
-            title: 'About',
-            class: 'nav-link js-scroll-trigger'
-        },
-        {
-            href: '#social',
-            title: 'Social',
-            class: 'nav-link js-scroll-trigger'
-        },
-        {
-            href: '#media',
-            title: 'Media',
-            class: 'nav-link js-scroll-trigger'
-        },
-        {
-            href: '#gallery',
-            title: 'Gallery',
-            class: 'nav-link js-scroll-trigger'
-        },
-        {
-            href: '#contact',
-            title: 'Contact',
-            class: 'nav-link js-scroll-trigger'
-        }
-    ]
-    : [
-        {
-            href: '/',
-            title: 'Landing Page',
-            class: 'nav-link'
-        }
-    ];
+const mainNav =
+    type === "index"
+        ? [
+              {
+                  href: "#about",
+                  title: "About",
+                  class: "nav-link js-scroll-trigger",
+              },
+              {
+                  href: "#social",
+                  title: "Social",
+                  class: "nav-link js-scroll-trigger",
+              },
+              {
+                  href: "#media",
+                  title: "Media",
+                  class: "nav-link js-scroll-trigger",
+              },
+              {
+                  href: "#gallery",
+                  title: "Gallery",
+                  class: "nav-link js-scroll-trigger",
+              },
+              {
+                  href: "#contact",
+                  title: "Contact",
+                  class: "nav-link js-scroll-trigger",
+              },
+          ]
+        : [
+              {
+                  href: "/",
+                  title: "Landing Page",
+                  class: "nav-link",
+              },
+          ];
 
 const otherNav = [
     {
-        href: '/teamspeakserver',
-        title: 'TeamSpeak Server',
-        class: 'nav-item dropdown-item'
+        href: "/teamspeakserver",
+        title: "TeamSpeak Server",
+        class: "nav-item dropdown-item",
     },
     {
-        href: '/trading',
-        title: 'Trading',
-        class: 'nav-item dropdown-item'
-    }
+        href: "/trading",
+        title: "Trading",
+        class: "nav-item dropdown-item",
+    },
 ];
 
-const brandHref = type === 'index' ? '#page-top' : '/';
+const brandHref = type === "index" ? "#page-top" : "/";
 ---
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -71,7 +72,8 @@ const brandHref = type === 'index' ? '#page-top' : '/';
             data-target="#navbarResponsive"
             aria-controls="navbarResponsive"
             aria-expanded="false"
-            aria-label="Toggle navigation">
+            aria-label="Toggle navigation"
+        >
             Menu
             <i class="fa fa-bars"></i>
         </button>
@@ -89,7 +91,12 @@ const brandHref = type === 'index' ? '#page-top' : '/';
                     })
                 }
                 <li class="dropdown nav-item">
-                    <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" data-toggle="dropdown">
+                    <a
+                        class="nav-link dropdown-toggle"
+                        id="dropdownMenuButton"
+                        data-bs-toggle="dropdown"
+                        data-toggle="dropdown"
+                    >
                         Other
                         <span class="caret"></span>
                     </a>
@@ -113,46 +120,22 @@ const brandHref = type === 'index' ? '#page-top' : '/';
 </nav>
 
 <script is:inline>
-    (function($) {
-        "use strict";
+    window.onscroll = () => {
+        const nav = document.getElementById("mainNav");
 
-        // Smooth scrolling using jQuery easing
-        $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: (target.offset().top - 48)
-                    }, 1000, "easeInOutExpo");
-                    return false;
-                }
-            }
-        });
-
-        // Closes responsive menu when a scroll trigger link is clicked
-        $('.js-scroll-trigger').click(function() {
-            $('.navbar-collapse').collapse('hide');
-        });
-
-        // Collapse the navbar when page is scrolled
-        $(window).scroll(function() {
-            if ($("#mainNav").offset().top > 100) {
-                $("#mainNav").addClass("navbar-shrink");
-            } else {
-                $("#mainNav").removeClass("navbar-shrink");
-            }
-        });
-    })(jQuery);
+        if (window.scrollY > 100) nav.classList.add("navbar-shrink");
+        else nav.classList.remove("navbar-shrink");
+    };
 </script>
 
 <style is:global>
     #mainNav {
-        font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
+            sans-serif;
         font-weight: 700;
         text-transform: uppercase;
         border: none;
-        background: #2C3E50;
+        background: #2c3e50;
     }
 
     #mainNav a:focus {
@@ -164,23 +147,27 @@ const brandHref = type === 'index' ? '#page-top' : '/';
         color: white;
     }
 
-    #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+    #mainNav .navbar-brand.active,
+    #mainNav .navbar-brand:active,
+    #mainNav .navbar-brand:focus,
+    #mainNav .navbar-brand:hover {
         color: white;
     }
 
     #mainNav .navbar-nav {
         letter-spacing: 1px;
-    
     }
     #mainNav .navbar-nav li.nav-item a.nav-link {
-        color: white; }
+        color: white;
+    }
 
     #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-        color: #71BCCE;
+        color: #71bcce;
         outline: none;
     }
 
-    #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+    #mainNav .navbar-nav li.nav-item a.nav-link:active,
+    #mainNav .navbar-nav li.nav-item a.nav-link:focus {
         color: white;
     }
 
@@ -192,16 +179,17 @@ const brandHref = type === 'index' ? '#page-top' : '/';
         border-color: white;
     }
 
-    #mainNav .navbar-toggler:focus, #mainNav .navbar-toggler:hover {
+    #mainNav .navbar-toggler:focus,
+    #mainNav .navbar-toggler:hover {
         color: white;
-        border-color: #71BCCE;
-        background-color: #71BCCE;
+        border-color: #71bcce;
+        background-color: #71bcce;
     }
 
     #mainNav .dropdown-item {
         padding: 0.25rem 1.5rem;
         background: none;
-        color: #71BCCE;
+        color: #71bcce;
         outline: none;
         font-weight: inherit;
     }
@@ -218,7 +206,6 @@ const brandHref = type === 'index' ? '#page-top' : '/';
             -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
             -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
             transition: padding-top 0.3s, padding-bottom 0.3s;
-        
         }
 
         #mainNav .navbar-brand {
@@ -226,18 +213,19 @@ const brandHref = type === 'index' ? '#page-top' : '/';
             -webkit-transition: all 0.3s;
             -moz-transition: all 0.3s;
             transition: all 0.3s;
-        
         }
 
         #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
             color: white;
             border-radius: 3px;
-            background: #71BCCE;
+            background: #71bcce;
         }
 
-        #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+        #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active,
+        #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus,
+        #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
             color: white;
-            background: #71BCCE;
+            background: #71bcce;
         }
 
         #mainNav.navbar-shrink {
