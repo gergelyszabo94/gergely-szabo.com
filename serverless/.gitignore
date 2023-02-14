@@ -1,0 +1,9 @@
+# package directories
+/contact form/node_modules
+/contact form/jspm_packages
+
+# Serverless directories
+/contact form/.serverless
+
+# Secrets
+/contact form/secrets.json
