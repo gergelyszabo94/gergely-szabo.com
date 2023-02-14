@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../layouts/Section.astro";
+---
+
+<Layout type="page" title="404 page" metaDescription="404 page">
+    <Section
+        title="Error 404: Not found :-("
+        id="about"
+        cl="light standardcontent"
+        lineStyle="line-light"
+    >
+        <div class="container text-center">
+            <p>The page you requested was not found on the server.</p>
+            <h3>Possible reasons you ended up here:</h3>
+            <div class="row">
+                <div class="col-lg-4 mx-auto">
+                    <ul class="text-start">
+                        <li>You mistyped the url.</li>
+                        <li>A bad link directed you to a non-existent page.</li>
+                        <li>The page was taken down since it was linked to.</li>
+                    </ul>
+                    <p>
+                        There is not much you can do about this error, except reporting
+                        dead links. Please head to another part of the site through the navigation
+                        bar!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </Section>
+</Layout>
