@@ -9,15 +9,15 @@ export interface Props {
 const { href, text, cl = "", lightbox} = Astro.props;
 ---
 
-<a class={`${cl}`} href={href} data-lightbox={lightbox}>
+<a class={`link-on-light-background ${cl}`} href={href} data-lightbox={lightbox}>
     {text}
 </a>
 
 <style>
-    a,
-    a:active,
-    a:hover,
-    a:focus {
+    .link-on-light-background,
+    .link-on-light-background:active,
+    .link-on-light-background:hover,
+    .link-on-light-background:focus {
         color: #2c3e50;
     }
 
