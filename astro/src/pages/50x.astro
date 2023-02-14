@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../layouts/Section.astro";
+---
+
+<Layout type="page" title="50x page" metaDescription="50x page">
+    <Section
+        title="Oops! Something went wrong..."
+        id="about"
+        cl="light standardcontent"
+        lineStyle="line-light"
+    >
+        <div class="container text-center">
+            <p>The page you requested was not found on the server.</p>
+            <h3>Possible reasons you ended up here:</h3>
+            <div class="row">
+                <div class="col-lg-4 mx-auto">
+                    <h3>
+                        We seem to be having some technical difficulties. Hang
+                        tight.
+                    </h3>
+                    <p>
+                        There is not much you can do about this error, try
+                        hitting refresh later or head to another part of the
+                        site through the navigation bar!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </Section>
+</Layout>
