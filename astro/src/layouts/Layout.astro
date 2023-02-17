@@ -1,62 +1,122 @@
 ---
-import Footer from '../components/Footer.astro';
-import Navigation from '../components/navi/Navigation.astro';
-import "bootstrap/dist/css/bootstrap.min.css"
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/navi/Navigation.astro";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/general.css";
 
 export interface Props {
 	type: string;
-	title: string,
-	metaDescription: string,
+	title: string;
+	metaDescription: string;
+	ogImage?: string;
 }
 
-const { type, title, metaDescription } = Astro.props;
+const {
+	type,
+	title,
+	metaDescription,
+	ogImage = "/img/headerss.png",
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(ogImage, Astro.url);
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content={metaDescription}>
-		<meta name="author" content="Gergely Szabo">
-		<meta name="theme-color" content="#2C3E50">
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta name="description" content={metaDescription} />
+		<meta name="author" content="Gergely Szabo" />
+		<meta name="theme-color" content="#2C3E50" />
 		<meta name="generator" content={Astro.generator} />
-	
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-	
+
+		<!-- open graph tags https://www.ogp.me/-->
+		<meta name="og:description" content={metaDescription} />
+		<meta property="og:title" content={title} />
+		<meta property="og:image" content={socialImageURL} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+			rel="stylesheet"
+			type="text/css"
+		/>
+
 		<!--Favicons from https://realfavicongenerator.net-->
-		<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-		<link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-		<link rel="shortcut icon" type="image/svg+xml" href="/img/favicon/favicon.ico" />
-		<meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
-		<link rel="icon" sizes="192x192" href="/img/favicon/android-chrome-192x192.png">
-		<link rel="icon" sizes="512x512" href="/img/favicon/android-chrome-512x512.png">
-	
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/img/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/img/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/img/favicon/favicon-16x16.png"
+		/>
+		<link
+			rel="mask-icon"
+			href="/img/favicon/safari-pinned-tab.svg"
+			color="#5bbad5"
+		/>
+		<link
+			rel="shortcut icon"
+			type="image/svg+xml"
+			href="/img/favicon/favicon.ico"
+		/>
+		<meta
+			name="msapplication-config"
+			content="/img/favicon/browserconfig.xml"
+		/>
+		<link
+			rel="icon"
+			sizes="192x192"
+			href="/img/favicon/android-chrome-192x192.png"
+		/>
+		<link
+			rel="icon"
+			sizes="512x512"
+			href="/img/favicon/android-chrome-512x512.png"
+		/>
+
 		<script
 			is:inline
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-			crossorigin="anonymous">
-		</script>
+			crossorigin="anonymous"
+		></script>
 		<!-- keep try something like this to work: -->
 		<!-- <script is:inline type="module">
 			// import "bootstrap/dist/js/bootstrap.bundle.min.js"
 			import "bootstrap/dist/js/bootstrap.bundle.min.js"
 		</script> -->
-		<slot name="custom-js"/>
+		<slot name="custom-js" />
 		<title>{title}</title>
 	</head>
 	<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav">
-		<Navigation
-			type={type}
-		/>
+		<Navigation type={type} />
 		<slot />
 		<script is:inline>
-			const scrollSpy = new bootstrap.ScrollSpy(document.body, {target: '#mainNav'});
+			const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+				target: "#mainNav",
+			});
 		</script>
 		<Footer />
 	</body>
