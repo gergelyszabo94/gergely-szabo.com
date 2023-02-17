@@ -1,7 +1,8 @@
 {
-  "name": "@example/basics",
+  "name": "gergely-szabo.com",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "author": "Gergely Szabo",
   "private": true,
   "scripts": {
     "dev": "astro dev",
