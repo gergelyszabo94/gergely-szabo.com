@@ -8,7 +8,7 @@ const { id, name } = Astro.props;
 ---
 
 <div class="col-sm-4 social-item">
-    <a class="social-link" href={`#socialModal${id}`} data-toggle="modal">
+    <a class="social-link" href={`#socialModal${id}`} data-bs-toggle="modal" data-bs-target={`#socialModal${id}`}> 
         <div class="caption">
             <div class="caption-content"></div>
         </div>
