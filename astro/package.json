@@ -8,7 +8,9 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "push": "aws s3 cp dist/ s3://gergely-szabo.com --recursive",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id E1I2IV07VQ5PI5 --paths /*"
   },
   "dependencies": {
     "@astrojs/sitemap": "^1.0.1",
