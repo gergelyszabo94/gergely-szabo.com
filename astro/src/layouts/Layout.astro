@@ -36,7 +36,7 @@ const socialImageURL = new URL(ogImage, Astro.url);
 		<meta name="generator" content={Astro.generator} />
 
 		<!-- open graph tags https://www.ogp.me/-->
-		<meta name="og:description" content={metaDescription} />
+		<meta property="og:description" content={metaDescription} />
 		<meta property="og:title" content={title} />
 		<meta property="og:image" content={socialImageURL} />
 		<meta property="og:type" content="website" />
