@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "author": "Gergely Szabo",
   "private": true,
+  "other_custom_stuff": {
+    "paste_to_terminal_to_deploy": "npm run build; npm run push; npm run invalidate"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
