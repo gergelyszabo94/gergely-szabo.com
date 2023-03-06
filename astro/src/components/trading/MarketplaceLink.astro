@@ -1,0 +1,28 @@
+---
+export interface Props {
+    href: string;
+    src: string;
+    title: string;
+    description: string;
+}
+
+const { href, src, title, description } = Astro.props;
+---
+
+<div class="col-lg-2 col-sm-4 col-6 text-center my-3">
+    <a href={href} title={title}>
+        <img
+            src={`/img/trading/markets/${src}`}
+            class="img-fluid marketLogo"
+            alt={description}
+            title={description}
+        />
+        <div>{title}</div>
+    </a>
+</div>
+
+<style>
+    .marketLogo {
+        height: 100px;
+    }
+</style>

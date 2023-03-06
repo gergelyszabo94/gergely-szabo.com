@@ -8,6 +8,7 @@ import LinkOnLightBackground from "../components/LinkOnLightBackground.astro";
 import CenteredImage from "../components/trading/CenteredImage.astro";
 import ButtonLink from "../components/trading/ButtonLink.astro";
 import Video from "../components/trading/Video.astro";
+import MarketplaceLink from "../components/trading/MarketplaceLink.astro";
 
 const sections = [
     {
@@ -25,6 +26,10 @@ const sections = [
     {
         id: "tradewithme",
         title: "Trading with me",
+    },
+    {
+        id: "markets",
+        title: "Markets",
     },
     {
         id: "pricing",
@@ -49,6 +54,114 @@ const sections = [
     {
         id: "csgotraderextension",
         title: "My Browser Extension for trading",
+    },
+];
+
+const marketLinks = [
+    {
+        title: "CSGOFLOAT",
+        description:
+            "CSGOFLOAT was one of the first p2p markets, it does not use your API key",
+        href: "https://csgofloat.com/stall/76561198036030455?ref=gerytrading",
+        src: "csgofloat.png",
+    },
+    {
+        title: "BUFF.MARKET",
+        description:
+            "BUFF.MARKET is owned by the same company as the other Buff but it's targeting users from western countries, I am one of the most active sellers and buyers here.",
+        href: "https://buff.market/#/user_store/U1093423730/selling",
+        src: "buffmarket.png",
+    },
+    {
+        title: "GAMERPAY",
+        description:
+            "GamerPay is ran by some nice Danes, targeting mostly europeans (they use euros as currency)",
+        href: "https://gamerpay.gg/shop/5609",
+        src: "gamerpay.png",
+    },
+    {
+        title: "DMARKET",
+        description:
+            "DMARKET has both p2p and normal bot style marketplaces, I have my listed on the former",
+        href: "https://dmarket.com/ingame-items/item-list/csgo-skins?walletId=488b0c2a2cce66fb922b6b05177a7ae999ff8fc1dcdc0ad268877d6cd261eb4f&exchangeTab=f2fOffers",
+        src: "dmarket.png",
+    },
+    {
+        title: "WAXPEER",
+        description:
+            "Waxpeer embeds into other sites where you can use skins to deposit/withdraw funds, they also have a separate shop",
+        href: "https://waxpeer.com/shop/27e88001-030a-4260-82b5-084f98f455a0",
+        src: "waxpeer.png",
+    },
+    {
+        title: "Bitskins P2P",
+        description:
+            "Bitskins joined the game and introduced its own peer-to-peer market a while ago",
+        href: "https://p2p.bitskins.com/store/289",
+        src: "bitskins.png",
+    },
+    {
+        title: "BUFF",
+        description: "Buff.163.com is a huge China focused marketplace, ",
+        href: "https://buff.163.com/shop/U1091616391?store_game=csgo#tab=selling&game=csgo",
+        src: "buff.png",
+    },
+    {
+        title: "SkinThunder",
+        description:
+            "Thunder is owned by and Aussie guy, it's not very active but the fees are low",
+        href: "https://skinthunder.com/store/76561198036030455",
+        src: "skinthunder.png",
+    },
+    {
+        title: "500",
+        description:
+            "500 is a casino site where you can gamble your money away, or more importantly for me buy my items",
+        href: "https://csgo500.com/withdraw/skins/user-p2p/5f2856b8f8faa044727a88a6",
+        src: "500.png",
+    },
+];
+
+const otherMarketLinks = [
+    {
+        description:
+            "I have my items listed on CSMONEY P2P, they don't have a storage page feature though",
+        href: "https://cs.money/market/buy/?utm_source=mediabuy&utm_medium=cstrade&utm_campaign=market&utm_content=link",
+    },
+    {
+        description:
+            "I usually have some items for sale on non-p2p Bitskins, it's one of the oldest that is still around",
+        href: "https://bskn.co/inventory?alias=xcW4c_phcUc&app_id=730&ref_alias=xcW4c_phcUc",
+    },
+    {
+        description:
+            "I don't use it anymore, but Skinport is one of the most popular trusted markets out there",
+        href: "https://skinport.com/market/730?r=gery",
+    },
+    {
+        description:
+            "Skinbaron is a popular trusted traditional non-p2p mostly among Europeans",
+        href: "https://skinbaron.com/partner/gery",
+    },
+    {
+        description:
+            "CS.MONEY is the most popular trade bot site that's been around for years",
+        href: "https://cs.money/csgo/trade/?utm_source=mediabuy&utm_medium=cstrade&utm_campaign=cstrd0920&utm_content=link",
+    },
+    {
+        description:
+            "TRADEIT.GG is a trade bot site with a total inventory value of $5M, with the option of investing your own money at 36.9% APR atm",
+        href: "https://tradeit.gg/?aff=gery",
+    },
+    {
+        description:
+            "CS.TRADE is a less-known trade bot site, also offering investment opportunity at 2% return in 30 days.",
+        href: "https://cs.trade/ref/CSGOTRADERAPP",
+    },
+    {
+        description:
+            "It's not a skin site, but Wise is a great option for payments, I use it to receive payments in many currencies",
+        href: "https://wise.com/invite/u/gergelys215",
     },
 ];
 ---
@@ -568,6 +681,57 @@ const sections = [
     <Section
         title={sections[4].title}
         id={sections[4].id}
+        cl="dark"
+        lineStyle="line-light"
+    >
+        <p>
+            I have my items listed on a wide variety of peer-to-peer CS:GO
+            marketplaces. This is a collection of my "stores" on said markets. I
+            can't vouch for them, but trust all of them with my own money. If
+            you can't find an item that you see in my inventory, then it's
+            probably not tradable yet. You might notice that my skins have
+            different prices on each marketplace, this is usually because the
+            different markets have different fee structures for sales and
+            balance withdrawals. They also focus on different parts of the
+            world, find the one with the most suitable payment method for you!
+        </p>
+        {
+            marketLinks.map((market) => {
+                return (
+                    <MarketplaceLink
+                        href={market.href}
+                        src={market.src}
+                        title={market.title}
+                        description={market.description}
+                    />
+                );
+            })
+        }
+        <p>
+            I deliver sold items in a few minutes unless I am asleep in that
+            case it might take a few hours until I wake up. I also include a few
+            referral links, if you use those to sign up then you will support me,
+            and you might get a reward yourself.
+        </p>
+        <div class="container">
+            <ul>
+                {
+                    otherMarketLinks.map((market) => {
+                        return (
+                            <li>
+                                <a href={market.href}>
+                                    {market.description}
+                                </a>
+                            </li>
+                        );
+                    })
+                }
+            </ul>
+        </div>
+    </Section>
+    <Section
+        title={sections[5].title}
+        id={sections[5].id}
         cl=""
         lineStyle="line-light"
     >
@@ -654,8 +818,8 @@ const sections = [
         </p>
     </Section>
     <Section
-        title={sections[5].title}
-        id={sections[5].id}
+        title={sections[6].title}
+        id={sections[6].id}
         cl="light"
         lineStyle="line-light"
     >
@@ -698,8 +862,8 @@ const sections = [
         </div>
     </Section>
     <Section
-        title={sections[6].title}
-        id={sections[6].id}
+        title={sections[7].title}
+        id={sections[7].id}
         cl=""
         lineStyle="line-primary"
     >
@@ -753,8 +917,8 @@ const sections = [
         </div>
     </Section>
     <Section
-        title={sections[7].title}
-        id={sections[7].id}
+        title={sections[8].title}
+        id={sections[8].id}
         cl="light"
         lineStyle="line-light"
     >
@@ -826,8 +990,8 @@ const sections = [
         </div>
     </Section>
     <Section
-        title={sections[8].title}
-        id={sections[8].id}
+        title={sections[9].title}
+        id={sections[9].id}
         cl="dark"
         lineStyle="line-light"
     >
@@ -929,19 +1093,18 @@ const sections = [
         </div>
     </Section>
     <Section
-        title={sections[9].title}
-        id={sections[9].id}
+        title={sections[10].title}
+        id={sections[10].id}
         cl=""
         lineStyle="line-primary"
     >
         <p>
-            I have created a site for it that has much more detail
-            so I will just leave a link here and let you check the
-            details there. It's at
+            I have created a site for it that has much more detail so I will
+            just leave a link here and let you check the details there. It's at
             <a href="https://csgotrader.app/">csgotrader.app.</a>
-            The site details the extension's features, where you can get it,
-            how prices are calculated, etc. You can also find of me showcasing
-            the extension's features below.
+            The site details the extension's features, where you can get it, how
+            prices are calculated, etc. You can also find of me showcasing the extension's
+            features below.
         </p>
         <Video
             src="https://www.youtube.com/embed/6OOGxAlc8O8"
