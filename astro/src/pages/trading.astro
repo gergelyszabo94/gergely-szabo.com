@@ -9,6 +9,7 @@ import CenteredImage from "../components/trading/CenteredImage.astro";
 import ButtonLink from "../components/trading/ButtonLink.astro";
 import Video from "../components/trading/Video.astro";
 import MarketplaceLink from "../components/trading/MarketplaceLink.astro";
+import ItemList from '../components/trading/itemList/ItemList.astro';
 
 const sections = [
     {
@@ -30,6 +31,10 @@ const sections = [
     {
         id: "markets",
         title: "Markets",
+    },
+    {
+        id: "items",
+        title: "Item List",
     },
     {
         id: "pricing",
@@ -765,6 +770,14 @@ const otherMarketLinks = [
         title={sections[5].title}
         id={sections[5].id}
         cl=""
+        lineStyle="line-primary"
+    >
+        <ItemList />
+    </Section>
+    <Section
+        title={sections[6].title}
+        id={sections[6].id}
+        cl="dark"
         lineStyle="line-light"
     >
         <p>
@@ -850,8 +863,8 @@ const otherMarketLinks = [
         </p>
     </Section>
     <Section
-        title={sections[6].title}
-        id={sections[6].id}
+        title={sections[7].title}
+        id={sections[7].id}
         cl="light"
         lineStyle="line-light"
     >
@@ -894,8 +907,8 @@ const otherMarketLinks = [
         </div>
     </Section>
     <Section
-        title={sections[7].title}
-        id={sections[7].id}
+        title={sections[8].title}
+        id={sections[8].id}
         cl=""
         lineStyle="line-primary"
     >
@@ -949,8 +962,8 @@ const otherMarketLinks = [
         </div>
     </Section>
     <Section
-        title={sections[8].title}
-        id={sections[8].id}
+        title={sections[9].title}
+        id={sections[9].id}
         cl="light"
         lineStyle="line-light"
     >
@@ -1022,8 +1035,8 @@ const otherMarketLinks = [
         </div>
     </Section>
     <Section
-        title={sections[9].title}
-        id={sections[9].id}
+        title={sections[10].title}
+        id={sections[10].id}
         cl="dark"
         lineStyle="line-light"
     >
@@ -1125,8 +1138,8 @@ const otherMarketLinks = [
         </div>
     </Section>
     <Section
-        title={sections[10].title}
-        id={sections[10].id}
+        title={sections[11].title}
+        id={sections[11].id}
         cl=""
         lineStyle="line-primary"
     >

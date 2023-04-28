@@ -1,0 +1,65 @@
+---
+const response = await fetch(
+  `${import.meta.env.SITE}data/trading/inventory.json`
+);
+const data = await response.json();
+
+const sortItems = () => {
+  return data.items.sort((a, b) => {
+    if (a.listPrice > b.listPrice) {
+      return -1;
+    }
+    if (a.listPrice < b.listPrice) {
+      return 1;
+    }
+    return 0;
+  });
+};
+
+const sortedItems = sortItems();
+const generatedAtDate = new Date(data.generatedAt);
+---
+
+<div>
+  <p>
+    Since you can't check when others' items become tradable anymore I spend a lot of my
+    time answering questions about it, I decided to make this section to help reduce that.
+    I also include the price of the item if it is tradable. The prices are negotiable in most cases.
+    I plan to update the this table every day.
+  </p>
+  <p>
+    List updated: {`${generatedAtDate.getDate()}/${generatedAtDate.getMonth() + 1} ${generatedAtDate.getHours()}:${generatedAtDate.getMinutes()}`}
+  </p>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Item Name</th>
+      <th scope="col">Tradabilty</th>
+      <th scope="col">Float</th>
+      <th scope="col">Price</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+      sortedItems.map((item) => (
+        <tr>
+          <td><a href={`https://steamcommunity.com/id/gergelyszabo/inventory/#730_2_${item.assetID}`}>{item.name}</a></td>
+          <td
+            title={
+              item.tradability !== "Tradable"
+                ? `Tradable at ${new Date(item.tradableAfter).toString()}`
+                : "Item is ready to be traded."
+            }
+          >
+            {item.tradability}
+          </td>
+          <td>{item.float}</td>
+          <td>{item.tradability === "Tradable" ? `$${item.listPrice}` : ""}</td>
+          <td>{item.comment}</td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>
